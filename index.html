@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Largest website for property | nugree.com</title>
+	<link media="all" rel="stylesheet" href="css/main.css">
+	<link media="all" rel="stylesheet" href="css/property-agent-listing.css">
+	<link media="all" rel="stylesheet" href="css/property-agent-detail.css">
+	<link media="all" rel="stylesheet" href="css/add-property-form.css">
+	<link media="all" rel="stylesheet" href="css/login-page.css">
+	<link media="all" rel="stylesheet" href="css/register-now.css">
+	<link rel="icon" type="image/png" href="images/favicon-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="images/favicon-160x160.png" sizes="160x160">
+	<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<a class="nav-opener navigation-toggler"><span></span><strong>Menu</strong></a>
+			<div class="logo"><a href="#"><img src="images/logo.png" alt="nugree.com"></a></div>
+			<div class="right-area">
+				<a class="searchOpener"><span class="icon-search"></span></a>
+				<form action="" class="searchById">
+					<input type="number" placeholder="Search by ID">
+					<button type="submit"><span class="icon-search"></span></button>
+				</form>
+				<ul class="customLinks">
+					<li>
+						<a href="#">Login / Register</span></a>
+						<ul class="dropDown">
+							<li><a href="#">my profile</a></li>
+							<li><a href="#">my listing</a></li>
+							<li><a href="#">logout</a></li>
+						</ul>
+					</li>
+					<!--<li><a href="#"><span class="hidden-xs">Login / Register</span><span class="icon-profile2 hidden"></span></a></li>-->
+					<li><a href="#" class="fixed-ui-mob">List property</span></a></li>
+				</ul>
+			</div>
+		</header>
+		<main id="main" role="main">
+			<div class="page-holder">
+				<!--<div class="index-page">
+					<div class="news-slideshow">
+						<div class="mask">
+							<div class="container main-search">
+								<form class="mainSearch-form">
+									<span class="select-load">
+										<input id="selectbox" class="js-data-example-ajax" name="repo">
+									</span>
+									<ul class="typeOfBuying">
+										<li>
+											<label for="buy" class="customRadio">
+												<input type="radio" name="typeOfBuying" id="buy" checked>
+												<span class="fake-label">Buy</span>
+											</label>
+										</li>
+										<li>
+											<label for="rent" class="customRadio">
+												<input type="radio" name="typeOfBuying" id="rent">
+												<span class="fake-label">Rent</span>
+											</label>
+										</li>
+									</ul>
+									<ul class="subTypes">
+										<li>
+											<label for="all" class="customRadio">
+												<input type="radio" name="subtype" id="all" checked>
+												<span class="fake-radio"></span>
+												<span class="fake-label">All Types</span>
+											</label>
+										</li>
+										<li>
+											<label for="homes" class="customRadio">
+												<input type="radio" name="subtype" id="homes" >
+												<span class="fake-radio"></span>
+												<span class="fake-label">Homes</span>
+											</label>
+										</li>
+										<li>
+											<label for="plots" class="customRadio">
+												<input type="radio" name="subtype" id="plots" >
+												<span class="fake-radio"></span>
+												<span class="fake-label">Plots</span>
+											</label>
+										</li>
+										<li>
+											<label for="Commercial" class="customRadio">
+												<input type="radio" name="subtype" id="Commercial" >
+												<span class="fake-radio"></span>
+												<span class="fake-label">Commercial</span>
+											</label>
+										</li>
+									</ul>
+									<span class="select-load">
+										<select class="js-example-basic-single">
+											<option>Wyoming</option>
+											<option>Alabama</option>
+											<option>Wyoming</option>
+											<option>Alabama</option>
+											<option>Wyoming</option>
+											<option>Alabama</option>
+											<option>Wyoming</option>
+											<option>Alabama</option>
+											<option>Wyoming</option>
+											<option>Alabama</option>
+											<option>Wyoming</option>
+											<option>Alabama</option>
+											<option>Wyoming</option>
+											<option>Alabama</option>
+											<option>Wyoming</option>
+										</select>
+									</span>
+									<button type="submit">Search<span class="icon-arrow-right"></span></button>
+								</form>
+								<div class="btn-holder">
+									<ul class="total-slides">
+										<li><span class="cur-num">0</span></li>
+										<li><span class="all-num">0</span></li>
+									</ul>
+									<div class="btn-container">
+										<a href="#" class="btn-prev"><span class="icon-arrow-left"></span></a>
+										<a href="#" class="btn-next"><span class="icon-arrow-right"></span></a>
+									</div>
+								</div>
+							</div>
+							<div class="slideset">
+								<div class="slide">
+									<img src="images/gawadar.jpg" alt="gawadar city">
+									<div class="container">
+										<div class="caption">
+											<h1>gawadar <span>city</span></h1>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+											<a href="#join-us-pro" class="btn-default lightbox">Join us !</a>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<img src="images/gawadar.jpg" alt="gawadar city">
+									<div class="container">
+										<div class="caption">
+											<h1>gawadar <span>city</span></h1>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+											<a href="#join-us-pro" class="btn-default lightbox">Join us !</a>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<img src="images/gawadar.jpg" alt="gawadar city">
+									<div class="container">
+										<div class="caption">
+											<h1>gawadar <span>city</span></h1>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+											<a href="#join-us-pro" class="btn-default lightbox">Join us !</a>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<img src="images/gawadar.jpg" alt="gawadar city">
+									<div class="container">
+										<div class="caption">
+											<h1>gawadar <span>city</span></h1>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+											<a href="#join-us-pro" class="btn-default lightbox">Join us !</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="agent-slider">
+						<h2>Top Agents</h2>
+						<div class="mask">
+							<div class="slideset">
+								<div class="slide"><a href="#"><img src="images/agent1.jpg" alt="image description"></a></div>
+								<div class="slide"><a href="#"><img src="images/agent1.jpg" alt="image description"></a></div>
+								<div class="slide"><a href="#"><img src="images/agent1.jpg" alt="image description"></a></div>
+								<div class="slide"><a href="#"><img src="images/agent1.jpg" alt="image description"></a></div>
+								<div class="slide"><a href="#"><img src="images/agent1.jpg" alt="image description"></a></div>
+								<div class="slide"><a href="#"><img src="images/agent1.jpg" alt="image description"></a></div>
+								<div class="slide"><a href="#"><img src="images/agent1.jpg" alt="image description"></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="latest-news">
+						<div class="heading-btns">
+							<h2>NEWS</h2>
+							<a href="#" class="btn-prev"><span class="icon-arrow-left"></span></a>
+							<a href="#" class="btn-next"><span class="icon-arrow-right"></span></a>
+						</div>
+						<div class="mask">
+							<div class="slideset">
+								<div class="slide">
+									<div class="container">
+										<h1>What is Lorem Ipsum?</h1>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+										<a href="#" class="btn-default">READ MORE</a>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="container">
+										<h1>What is Lorem Ipsum?</h1>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+										<a href="#" class="btn-default">READ MORE</a>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="container">
+										<h1>What is Lorem Ipsum?</h1>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+										<a href="#" class="btn-default">READ MORE</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cities-section text-center">
+						<h1><span>Top</span> Cities</h1>
+						<div class="layout">
+							<div class="col"><a href="#"><img src="images/img01.jpg" alt="images description"><span class="title">Gawadar</span></a></div>
+							<div class="col">
+								<ul>
+									<li><a href="#"><img src="images/img03.jpg" alt="image description"><span class="title">Lahore</span></a></li>
+									<li><a href="#"><img src="images/img05.jpg" alt="image description"><span class="title">Faisalabad</span></a></li>
+									<li><a href="#"><img src="images/img04.jpg" alt="image description"><span class="title">Karachi</span></a></li>
+									<li><a href="#"><img src="images/img04.jpg" alt="image description"><span class="title">Islamabad</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="projects-slideshow">
+						<div class="mask">
+							<h2>Projects</h2>
+							<div class="slideset">
+								<div class="slide">
+									<img src="images/img06.jpg" alt="image description">
+									<div class="container">
+										<div class="caption">
+											<strong class="heading">Air Avenue Luxury Apartments</strong>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the <a href="#">Read more..</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<img src="images/gawadar.jpg" alt="image description">
+									<div class="container">
+										<div class="caption">
+											<strong class="heading">Air Avenue Luxury Apartments</strong>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the <a href="#">Read more..</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<img src="images/img06.jpg" alt="image description">
+									<div class="container">
+										<div class="caption">
+											<strong class="heading">Air Avenue Luxury Apartments</strong>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the <a href="#">Read more..</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="btn-prev"><span class="icon-keyboard_arrow_left"></span></a>
+							<a href="#" class="btn-next"><span class="icon-keyboard_arrow_right"></span></span></a>
+							<a href="#" class="btn-default">View all projects</a>
+						</div>
+					</div>
+					<div class="mobile-app">
+						<div class="container">
+							<img src="images/img07.png" alt="image description" class="mobile-img">
+							<div class="caption">
+								<h1><span>Mobile</span> App</h1>
+								<strong class="heading">Coming Soon..</strong>
+								<div class="logo"><img src="images/logo.png" alt="nugree"></div>
+							</div>
+						</div>
+					</div>
+					<div class="about-us" id="about-us">
+						<h1><span>About</span> Us</h1>
+						<div class="description">
+							<h2>What is Lorem Ipsum?</h2>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+						</div>
+					</div>
+					<a href="#wrapper" class="search-property back-to-top"><span class="icon-search"></span> Search <br>property</a>
+				</div>-->
+				<div class="listing-page">
+					<div class="ads-slideshow">
+						<div class="mask">
+							<div class="slideset">
+								<div class="slide"><a href="#"><img src="images/banner4.jpg" alt="image description"></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<a class="aside-opener-filters togglerSearchButton">More Filters <b>(Land Area / Price...)</b><span class="button"><b></b></span></a>
+						<aside id="aside">
+							<div class="top-head">
+								<p>Search Filters</p>
+								<a class="close togglerSearchButton"><span class="icon-cross"></span></a>
+							</div>
+							<form class="filter-form">
+								<ul class="filters-links text-upparcase">
+									<li class="active">
+										<a class="filters-links-opener">PROPERTY FOR</a>
+										<div class="slide">
+											<ul class="filterChecks">
+												<li>
+													<label for="buy-filter" class="customRadio">
+														<input type="radio" name="typeFor" id="buy-filter">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">BUY</span>
+													</label>
+												</li>
+												<li>
+													<label for="rent-filter" class="customRadio">
+														<input type="radio" name="typeFor" id="rent-filter">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">BUY</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">Property Type</a>
+										<div class="slide">
+											<ul class="filterChecks">
+												<li>
+													<label for="house-filter" class="customRadio">
+														<input type="radio" name="propertyType" id="house-filter">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">HOUSE</span>
+													</label>
+												</li>
+												<li>
+													<label for="plot-filter" class="customRadio">
+														<input type="radio" id="plot-filter" name="propertyType">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">PLOT</span>
+													</label>
+												</li>
+												<li>
+													<label for="commercial-filter" class="customRadio">
+														<input type="radio" id="commercial-filter" name="propertyType">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">COMMERCIAL</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">Property SUB-Type</a>
+										<div class="slide">
+											<ul class="filterChecks">
+												<li>
+													<label for="home-filter" class="customRadio">
+														<input type="radio" id="home-filter" name="subType">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">HOUSE</span>
+													</label>
+												</li>
+												<li>
+													<label for="pent-filter" class="customRadio">
+														<input type="radio" id="pent-filter" name="subType">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">penthouse</span>
+													</label>
+												</li>
+												<li></li>
+											</ul>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">LOCATION / SOCITY</a>
+										<div class="slide">
+											<ul class="filterChecks">
+												<li>
+													<span class="select-load">
+														<input id="selectbox" class="js-data-example-ajax" name="repo">
+													</span>
+												</li>
+												<li>
+													<input id="selectbox" class="js-data-example-ajax" name="repo">
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">LAND AREA</a>
+										<div class="slide">
+											<span class="fake-select">
+												<select>
+													<option>1dasdasdsa</option>
+													<option>dasdasda1</option>
+													<option>dsadadsadad1</option>
+													<option>1dasdasdas</option>
+													<option>dsadasda1</option>
+													<option>1dsadasd</option>
+													<option>dsadasdasd1</option>
+												</select>
+											</span>
+											<div class="fromTo">
+												<div class="field-holder">
+													<input type="number" placeholder="From">
+												</div>
+												<div class="field-holder">
+													<input type="number" placeholder="To">
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">PRICE RANGE</a>
+										<div class="slide">
+											<div class="fromTo full-width">
+												<div class="field-holder">
+													<input type="number" placeholder="From" class="PriceField">
+												</div>
+												<div class="field-holder">
+													<input type="number" placeholder="To" class="PriceField">
+												</div>
+											</div>
+											<span class="calculatedPrice">Please enter the price</span>
+										</div>
+									</li>
+								</ul>
+								<ul class="filter-btn">
+									<li><button type="submit" class="btn-search">Search</button></li>
+									<li><button type="reset" class="btn-reset">Reset</button></li>
+								</ul>
+							</form>
+						</aside>
+						<section id="content">
+							<div class="propertyNotFound hidden">
+								<strong class="no-heading">sorry, no property found</strong>
+								<p>Maybe your search was to specific, please try searching with another term.</p>
+							</div>
+							<div class="sort-by">
+								<span class="label">Sort by:</span>
+								<span class="fake-select">
+									<select>
+										<option>acha</option>
+										<option>ok</option>
+									</select>
+								</span>
+							</div>
+							<article class="publicProperty-post">
+								<div class="image-holder">
+									<div class="listing-image-slider">
+										<div class="mask">
+											<div class="slideset">
+												<div class="slide"><a href="#"><img src="images/img10.jpg" alt="image description"></a></div>
+												<div class="slide"><a href="#"><img src="images/img10.jpg" alt="image description"></a></div>
+												<div class="slide"><a href="#"><img src="images/img10.jpg" alt="image description"></a></div>
+											</div>
+										</div>
+										<a href="#" class="btn-prev"><span class="icon-keyboard_arrow_left"></span></a>
+										<a href="#" class="btn-next"><span class="icon-keyboard_arrow_right"></span></a>
+									</div>
+								</div>
+								<div class="caption text-left">
+									<div class="layout">
+										<h1><a href="#">80 marla Residential Plot for-sale in Executive Lodges Block Bahria Town</a></h1>
+										<p>The Team Estate (R) Offers: 4 Kanal 3 Marla Unique Option in Executive Lodges Bahria Town Lahore Plot 4-B Demand= 6 Crore 75 Lacs 3rd Next to...</p>
+										<span class="price">Rs <b>1.25</b> lakh</span>
+										<span class="premiumProperty text-upparcase">Premium</span>
+										<div class="holder-ui">
+											<ul class="public-ui-features text-capital">
+												<li><span>bedroom</span></li>
+												<li><span>bedroom</span></li>
+												<li><span>bedroom</span></li>
+												<li><span>bedroom</span></li>
+												<li><span>bedroom</span></li>
+											</ul>
+											<img src="images/ico01.jpg" alt="image description" class="company-logo">
+										</div>
+									</div>
+									<div class="layout links-holder">
+										<a href="#" class="btn-default text-upparcase">VIEW DETAILS <span class="icon-search"></span></a>
+										<ul class="quick-links">
+											<li><a href="#callPopup" class="lightbox call-agent-btn" data-tel="03154379760"><span class="icon-phone"></span><span class="hidden-xs">View number</span></a></li>
+											<li><a href="#sendEmail-popup" class="lightbox"><span class="icon-empty-envelop"></span><span class="hidden-xs">Send mail</span></a></li>
+										</ul>
+										<a class="add-to-favorite"><span class="icon-heart"></span></a>
+									</div>
+								</div>
+							</article>
+							<ul class="pager">
+								<li><a href="#" class="first"><span class="icon-arrow1-left"></span></a></li>
+								<li><a href="#" class="previous"><span class="icon-bold-arrow-left"></span></a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">6</a></li>
+								<li><a href="#">7</a></li>
+								<li><a href="#" class="next"><span class="icon-bold-arrow-right"></span></a></li>
+								<li><a href="#" class="last"><span class="icon-arrow1-right"></span></a></li>
+							</ul>
+						</section>
+						<div class="popup-holder">
+							<div id="callPopup" class="lightbox call-agent generic-lightbox">
+								<span class="lighbox-heading">Phone Number</span>
+								<p></p>
+								<span class="information"><span class="icon-info"></span>When you call, don't forget to mention that you found this ad on Property42.pk</span>
+							</div>
+							<div id="sendEmail-popup" class="lightbox generic-lightbox">
+								<span class="lighbox-heading">Send Email</span>
+								<form class="inquiry-email-form">
+									<div class="field-holder">
+										<label for="name">Name</label>
+										<div class="input-holder"><input type="text" id="name"></div>
+									</div>
+									<div class="field-holder">
+										<label for="email">Email</label>
+										<div class="input-holder"><input type="email" id="email"></div>
+									</div>
+									<div class="field-holder">
+										<label for="phone">phone</label>
+										<div class="input-holder"><input type="tel" id="phone"></div>
+									</div>
+									<div class="field-holder">
+										<label for="subject">subject</label>
+										<div class="input-holder"><input type="text" id="subject"></div>
+									</div>
+									<div class="field-holder">
+										<label for="message">message</label>
+										<div class="input-holder">
+											<textarea id="message"></textarea>
+											<p>By submitting this form I agree to <a href="#terms-of-user" class="termsOfUse lightbox">Terms of Use</a></p>
+										</div>
+									</div>
+									<button type="submit">SEND</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--<div class="agent-listing-page">
+					<div class="container">
+						<a class="aside-opener-filters togglerSearchButton">More Filters <b>(Land Area / Price...)</b><span class="button"><b></b></span></a>
+						<aside id="aside">
+							<div class="top-head">
+								<p>Search Filters</p>
+								<a class="close togglerSearchButton"><span class="icon-cross"></span></a>
+							</div>
+							<form class="filter-form">
+								<ul class="filters-links text-upparcase">
+									<li class="active">
+										<a class="filters-links-opener">SEARCH FILTERS</a>
+										<div class="slide"></div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">PROPERTY FOR</a>
+										<div class="slide">
+											<ul class="filterChecks">
+												<li>
+													<label for="buy-filter" class="customRadio">
+														<input type="radio" name="typeFor" id="buy-filter">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">BUY</span>
+													</label>
+												</li>
+												<li>
+													<label for="rent-filter" class="customRadio">
+														<input type="radio" name="typeFor" id="rent-filter">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">BUY</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">Property Type</a>
+										<div class="slide">
+											<ul class="filterChecks">
+												<li>
+													<label for="house-filter" class="customRadio">
+														<input type="radio" name="propertyType" id="house-filter">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">HOUSE</span>
+													</label>
+												</li>
+												<li>
+													<label for="plot-filter" class="customRadio">
+														<input type="radio" id="plot-filter" name="propertyType">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">PLOT</span>
+													</label>
+												</li>
+												<li>
+													<label for="commercial-filter" class="customRadio">
+														<input type="radio" id="commercial-filter" name="propertyType">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">COMMERCIAL</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">Property SUB-Type</a>
+										<div class="slide">
+											<ul class="filterChecks">
+												<li>
+													<label for="home-filter" class="customRadio">
+														<input type="radio" id="home-filter" name="subType">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">HOUSE</span>
+													</label>
+												</li>
+												<li>
+													<label for="pent-filter" class="customRadio">
+														<input type="radio" id="pent-filter" name="subType">
+														<span class="fake-checkbox"></span>
+														<span class="fake-label">penthouse</span>
+													</label>
+												</li>
+												<li></li>
+											</ul>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">LOCATION / SOCITY</a>
+										<div class="slide">
+											<ul class="filterChecks">
+												<li>
+													<select class="js-example-basic-single">
+														<option>1dasdasdsa</option>
+														<option>dasdasda1</option>
+														<option>dsadadsadad1</option>
+														<option>1dasdasdas</option>
+														<option>dsadasda1</option>
+														<option>1dsadasd</option>
+														<option>dsadasdasd1</option>
+													</select>
+												</li>
+												<li>
+													<select class="js-example-basic-single">
+														<option>dasdsadad1</option>
+														<option>dsadsadasd1</option>
+														<option>dasdadada1</option>
+														<option>dsadasdad1</option>
+														<option>dasdasdas1</option>
+														<option>dsadasd1</option>
+														<option>adsad1</option>
+													</select>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">LAND AREA</a>
+										<div class="slide">
+											<span class="fake-select">
+												<select>
+													<option>1dasdasdsa</option>
+													<option>dasdasda1</option>
+													<option>dsadadsadad1</option>
+													<option>1dasdasdas</option>
+													<option>dsadasda1</option>
+													<option>1dsadasd</option>
+													<option>dsadasdasd1</option>
+												</select>
+											</span>
+											<div class="fromTo">
+												<div class="field-holder">
+													<input type="number" placeholder="From">
+												</div>
+												<div class="field-holder">
+													<input type="number" placeholder="To">
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="active">
+										<a class="filters-links-opener">PRICE RANGE</a>
+										<div class="slide">
+											<div class="fromTo full-width">
+												<div class="field-holder">
+													<input type="number" placeholder="From" class="PriceField">
+												</div>
+												<div class="field-holder">
+													<input type="number" placeholder="To" class="PriceField">
+												</div>
+											</div>
+											<span class="calculatedPrice">Please enter the price</span>
+										</div>
+									</li>
+								</ul>
+								<ul class="filter-btn srchBtnFxd">
+									<li><button type="submit">Search</button></li>
+									<li><button type="reset">Reset</button></li>
+								</ul>
+							</form>
+						</aside>
+						<section id="content">
+							<div class="propertyNotFound hidden">
+								<strong class="no-heading">sorry, no record found</strong>
+								<p>Maybe your search was to specific, please try searching with another term.</p>
+							</div>
+							<article class="publicAgent-post">
+								<div class="post-holder">
+									<div class="image-holder">
+										<img src="images/ico01.jpg" alt="image description">
+									</div>
+									<div class="caption text-left">
+										<div class="layout">
+											<h1>JR Property</h1>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry,</p>
+										</div>
+										<div class="layout">
+											<span class="trusted-agent"><span class="icon-premium-badge"></span>Trusted</span>
+										</div>
+										<div class="layout links-holder">
+											<div class="links-left">
+												<a href="#" class="btn-default text-upparcase">VIEW DETAILS <span class="icon-search"></span></a>
+											</div>
+											<div class="links-right">
+												<ul class="quick-links">
+													<li><a href="#callPopup" class="lightbox call-agent-btn" data-tel="03154379760"><span class="icon-phone"></span><span class="hidden-xs">View number</span></a></li>
+													<li><a href="#sendEmail-popup" class="lightbox"><span class="icon-empty-envelop"></span><span class="hidden-xs">Send mail</span></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</article>
+							<ul class="pager">
+								<li><a href="#" class="previous"><span class="icon-left-arrow"></span></a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">6</a></li>
+								<li><a href="#">7</a></li>
+								<li><a href="#">8</a></li>
+								<li><a href="#">9</a></li>
+								<li><a href="#">10</a></li>
+								<li><a href="#" class="next"><span class="icon-right-arrow"></span></a></li>
+							</ul>
+						</section>
+						<div class="popup-holder">
+							<div id="callPopup" class="lightbox call-agent generic-lightbox">
+								<span class="lighbox-heading">Phone Number</span>
+								<p></p>
+								<span class="information"><span class="icon-info"></span>When you call, don't forget to mention that you found this ad on Property42.pk</span>
+							</div>
+							<div id="sendEmail-popup" class="lightbox generic-lightbox">
+								<span class="lighbox-heading">Send Email</span>
+								<form class="inquiry-email-form">
+									<div class="field-holder">
+										<label for="name">Name</label>
+										<div class="input-holder"><input type="text" id="name"></div>
+									</div>
+									<div class="field-holder">
+										<label for="email">Email</label>
+										<div class="input-holder"><input type="email" id="email"></div>
+									</div>
+									<div class="field-holder">
+										<label for="phone">phone</label>
+										<div class="input-holder"><input type="tel" id="phone"></div>
+									</div>
+									<div class="field-holder">
+										<label for="subject">subject</label>
+										<div class="input-holder"><input type="text" id="subject"></div>
+									</div>
+									<div class="field-holder">
+										<label for="message">message</label>
+										<div class="input-holder">
+											<textarea id="message"></textarea>
+											<p>By submitting this form I agree to <a href="#terms-of-user" class="termsOfUse lightbox">Terms of Use</a></p>
+										</div>
+									</div>
+									<button type="submit">SEND</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				<!--<div class="login-page container">
+					<span class="global-success">You are SUCCESSFULLY Registered</span>
+					<span class="global-error">this is error</span>
+					<form class="login-form">
+						<h1>Log<span>in</span></h1>
+						<div class="layout">
+							<label for="login-email">E-mail ID</label>
+							<div class="input-holder"><input type="email" id="login-email" placeholder="Enter the email"></div>
+						</div>
+						<div class="layout">
+							<label for="login-pass">Password</label>
+							<div class="input-holder">
+								<input type="email" id="login-pass" placeholder="Enter the password">
+								<a href="#forgot-pass" class="forgot-pass lightbox">Forgot Password</a>
+							</div>
+						</div>
+						<ul class="buttons-holder text-upparcase">
+							<li>
+								<a href="#">REGISTER NOW</a>
+							</li>
+							<li>
+								<button type="submit">LOGIN<span class="icon-login"></span></button>
+							</li>
+						</ul>
+					</form>
+					<div class="popup-holder">
+						<div class="popup lightbox generic-lightbox" id="forgot-pass">
+							<form class="forgot-form">
+								<h1>Forgot <span>Password</span></h1>
+								<p>Enter your email address below and we will send you a new password.</p>
+								<div class="layout">
+									<label for="forgot-email">E-mail ID</label>
+									<div class="input-holder"><input type="email" id="forgot-email" placeholder="Enter the email"></div>
+								</div>
+								<ul class="buttons-holder text-upparcase text-center">
+									<li>
+										<button type="submit">SEND</button>
+									</li>
+								</ul>
+							</form>
+						</div>
+					</div>
+				</div>-->
+				<!--<div class="registerNow container ">
+					<form class="registration-form">
+						<h1>Register <span>Now</span></h1>
+						<div class="layout">
+							<div class="layout-holder">
+								<label for="f-name">First Name</label>
+								<div class="input-holder error">
+									<input type="text" id="f-name" placeholder="First Name">
+									<span class="error-text">please fill out this field</span>
+								</div>
+							</div>
+							<div class="layout-holder">
+								<label for="l-name">Last Name</label>
+								<div class="input-holder">
+									<input type="text" id="l-name" placeholder="Last Name">
+								</div>
+							</div>
+							<div class="layout-holder">
+								<label for="email">Email</label>
+								<div class="input-holder">
+									<input type="email" id="email" placeholder="Email">
+								</div>
+							</div>
+						</div>
+						<div class="layout">
+							<div class="layout-holder">
+								<label for="pass">Password</label>
+								<div class="input-holder">
+									<input type="password" id="pass" placeholder="Password">
+								</div>
+							</div>
+							<div class="layout-holder">
+								<label for="re-pass">Re-Enter Password</label>
+								<div class="input-holder">
+									<input type="password" id="re-pass" placeholder="Re-Enter Password">
+								</div>
+							</div>
+						</div>
+						<strong class="registerNow-heading"><span>Contact Information</span></strong>
+						<div class="layout two">
+							<div class="layout-holder">
+								<label for="address">Address</label>
+								<div class="input-holder">
+									<input type="text" id="address" placeholder="Address">
+								</div>
+							</div>
+							<div class="layout-holder">
+								<label for="m-number">Mobile Number</label>
+								<div class="input-holder">
+									<input type="tel" id="m-number" placeholder="Mobile Number">
+								</div>
+							</div>
+						</div>
+						<div class="layout two">
+							<div class="layout-holder phone-num">
+								<label for="p-number">Phone Number</label>
+								<div class="input-holder">
+									<input type="tel" id="p-number" placeholder="Phone Number">
+								</div>
+							</div>
+							<div class="layout-holder otherRole">
+								<label>Other Roles</label>
+								<div class="input-holder">
+									<a class="role-opener">0 Selected</a>
+								</div>
+							</div>
+						</div>
+						<ul class="role-listing">
+							<li>
+								<label for="owner-investor" class="customCheckbox">
+									<input type="checkbox" id="owner-investor" class="userRole-checkbox" name="owner-investor">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Owner / Investor</span>
+								</label>
+							</li>
+							<li>
+								<label for="tenant" class="customCheckbox">
+									<input type="checkbox" id="tenant" class="userRole-checkbox" name="tenant">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Tenant</span>
+								</label>
+							</li>
+							<li>
+								<label for="agent-2" class="customCheckbox">
+									<input type="checkbox" id="agent-2" class="userRole-checkbox agent-brokerCheckbox" name="agent-broker">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Agent/Broker</span>
+								</label>
+							</li>
+							<li>
+								<label for="Apprraiser" class="customCheckbox">
+									<input type="checkbox" id="Apprraiser" class="userRole-checkbox" name="apprraiser">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Apprraiser</span>
+								</label>
+							</li>
+							<li>
+								<label for="Architect" class="customCheckbox">
+									<input type="checkbox" id="Architect" class="userRole-checkbox" name="architect">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Architect</span>
+								</label>
+							</li>
+							<li>
+								<label for="Builder" class="customCheckbox">
+									<input type="checkbox" id="Builder" class="userRole-checkbox" name="builder">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Builder</span>
+								</label>
+							</li>
+							<li>
+								<label for="Corporate-Investor" class="customCheckbox">
+									<input type="checkbox" id="Corporate-Investor" class="userRole-checkbox" name="corporate-investor">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Corporate Investor</span>
+								</label>
+							</li>
+							<li>
+								<label for="Developer" class="customCheckbox">
+									<input type="checkbox" id="Developer" class="userRole-checkbox" name="developer">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Developer</span>
+								</label>
+							</li>
+							<li>
+								<label for="Listing-Administrator" class="customCheckbox">
+									<input type="checkbox" id="Listing-Administrator" class="userRole-checkbox" name="listing-admin">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Listing Administrator</span>
+								</label>
+							</li>
+							<li>
+								<label for="Mortgage-Broker" class="customCheckbox">
+									<input type="checkbox" id="Mortgage-Broker" class="userRole-checkbox" name="mortgage-broker">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Mortgage Broker</span>
+								</label>
+							</li>
+							<li>
+								<label for="Property/Asset-Manger" class="customCheckbox">
+									<input type="checkbox" id="Property/Asset-Manger" class="userRole-checkbox" name="property-manager">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Property/Asset Manger</span>
+								</label>
+							</li>
+							<li>
+								<label for="Researcher" class="customCheckbox">
+									<input type="checkbox" id="Researcher" class="userRole-checkbox" name="researcher">
+									<span class="fake-checkbox"></span>
+									<span class="fake-label">Researcher</span>
+								</label>
+							</li>
+						</ul>
+						<strong class="registerNow-heading smaller">
+							<span>
+								Are you an Agent ? <b>Yes</b>
+								<label for="agent" class="agent-check">
+									<input type="checkbox" class="hidden-checkfield agent-brokerCheckbox" id="agent">
+									<span class="fake-checkbox">
+										<span class="fake-button"></span>
+									</span>
+								</label>
+								<b>No</b>
+							</span>
+						</strong>
+						<div class="agent-information">
+							<strong class="registerNow-heading text-center">Agent Information</strong>
+							<div class="layout two first-small">
+								<div class="layout-holder">
+									<div class="company-logo">
+										<input type="file" id="c-logo" name="companyLogo" onchange="companyLogoUploader(this , '.company-profileP')">
+										<span class="name-tag">Add Company Logo</span>
+										<div class="logo-holder">
+											<label for="c-logo"><span class="icon-plus-square"></span></label>
+											<div class="picture-holder">
+												<img src="" class="company-profileP" alt="Company logo">
+												<a class="company-logo-delete"><span class="icon-cross"></span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="layout-holder">
+									<div class="full-width">
+										<label for="agencyName">Agency Name</label>
+										<div class="input-holder">
+											<input type="text" id="agencyName" name="agencyName"  placeholder="Agency Name">
+										</div>
+									</div>
+									<div class="full-width">
+										<label for="D-services">Agency Description</label>
+										<div class="input-holder">
+											<textarea id="D-services" name="agencyDescription" placeholder="Description of Services"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="layout two first-small">
+								<div class="layout-holder">
+									<label for="acha">sahi</label>
+									<div class="input-holder">
+										<span class="fake-select">
+											<select>
+												<option>sadsa</option>
+												<option>sadsa</option>
+												<option>sadsa</option>
+												<option>sadsa</option>
+											</select>
+										</span>
+									</div>
+								</div>
+								<div class="layout-holder">
+									<label for="selectSociety">Filter Socities You Deal In</label>
+									<div class="input-holder">
+										<input id="selectbox" class="js-data-example-ajax" name="repo">
+									</div>
+								</div>
+							</div>
+							<strong class="registerNow-heading text-center">Agency Contact Details</strong>
+							<div class="layout">
+								<div class="layout-holder">
+									<label for="compny-phone">Phone Number</label>
+									<div class="input-holder">
+										<input type="tel" placeholder="Company Phone Number" name="companyPhone" id="compny-phone" required>
+									</div>
+								</div>
+								<div class="layout-holder">
+									<label for="compny-mobile">Mobile Number</label>
+									<div class="input-holder">
+										<input type="tel" placeholder="Company Mobile Number" name="companyMobile" id="compny-mobile" required>
+									</div>
+								</div>
+								<div class="layout-holder">
+									<label for="compny-email">Company E-mail</label>
+									<div class="input-holder">
+										<input type="email" placeholder="Company Email" name="companyEmail" id="compny-email" required>
+									</div>
+								</div>
+							</div>
+							<div class="layout two">
+								<div class="layout-holder">
+									<label for="compny-address">Company Address</label>
+									<div class="input-holder">
+										<input type="text" placeholder="Company Address" name="companyAddress" id="compny-address" required>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="layout two">
+							<div class="layout-holder">
+								<ul class="agree-with-terms">
+									<li>
+										<label class="customCheckbox" for="term-cond">
+											<input type="checkbox" id="term-cond" required>
+											<span class="fake-checkbox"></span>
+											<span class="fake-label">I have read and agree to Property42.pk Terms and Conditions</span>
+										</label>
+									</li>
+									<li>
+										<label for="want-noti" class="customCheckbox">
+											<input type="checkbox" id="want-noti">
+											<span class="fake-checkbox"></span>
+											<span class="fake-label">I want to receive notifications for promotions, newsletters and website updates.</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+							<div class="layout-holder">
+								<input type="submit" value="SIGN ME UP">
+							</div>
+						</div>
+					</form>
+				</div>-->
+				<!--<div class="agent-detail-page">
+					<div class="detail-holder container">
+						<div class="frame">
+							<div class="agent-detail-holder">
+								<div class="agent-picture">
+									<img src="images/ico01.jpg" alt="image description">
+								</div>
+								<div class="agent-description">
+									<div class="layout">
+										<div class="left-side">
+											<h1><span>Etihad Marketing</span></h1>
+											<span class="location">Lahore</span>
+											<span class="premiumProperty text-upparcase">Premium</span>
+										</div>
+										<div class="right-side">
+											<span class="trusted-agent"><span class="icon-premium-badge"></span>Trusted</span>
+										</div>
+									</div>
+									<div class="agent-societies">
+										<span class="small-heading">Society we deal in</span>
+										<div class="agent-mask ">
+											<div class="agent-slideset">
+												<div class="agent-slide"><a href="#"><img src="images/img02.jpg" alt="image description"></a></div>
+												<div class="agent-slide"><a href="#"><img src="images/img03.jpg" alt="image description"></a></div>
+												<div class="agent-slide"><a href="#"><span class="image-description">lahore motorway city</span></a></div>
+												<div class="agent-slide"><a href="#"><span class="image-description">Al-jalil garden lahore</span></a></div>
+												<div class="agent-slide"><a href="#"><span class="image-description">Pak arab society lahore</span></a></div>
+											</div>
+											<a href="#" class="btn-prev"><span class="icon-keyboard_arrow_left"></span></a>
+											<a href="#" class="btn-next"><span class="icon-keyboard_arrow_right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="info-blockAgent">
+								<span class="heading text-upparcase">Contact Details</span>
+								<ul class="agentDetail-list">
+									<li>
+										<span class="icon-user"></span>
+										<span class="text-tag">Muhammad Aslam</span>
+									</li>
+									<li>
+										<span class="icon-location"></span>
+										<address>Office No 319, Main Boulevard, Phase 6, DHA, Lahore.</address>
+									</li>
+									<li>
+										<span class="icon-mobile"></span>
+										<span class="text-tag"><a href="tel:03234600036">0323 4600036</a></span>
+									</li>
+									<li>
+										<span class="icon-old-phone"></span>
+										<span class="text-tag"><a href="tel:03234600036">0323 4600036</a></span>
+									</li>
+									<li>
+										<span class="icon-domain"></span>
+										<span class="text-tag"><a href="#">www.etihadmarketing.com</a></span>
+									</li>
+								</ul>
+								<form class="inquiry-email-form">
+									<span class="small-heading">Send email</span>
+									<div class="field-holder">
+										<label for="name1">Name</label>
+										<div class="input-holder"><input type="text" id="name1"></div>
+									</div>
+									<div class="field-holder">
+										<label for="email1">Email</label>
+										<div class="input-holder"><input type="email" id="email1"></div>
+									</div>
+									<div class="field-holder">
+										<label for="phone2">phone</label>
+										<div class="input-holder"><input type="tel" id="phone2"></div>
+									</div>
+									<div class="field-holder">
+										<label for="subject3">subject</label>
+										<div class="input-holder"><input type="text" id="subject3"></div>
+									</div>
+									<div class="field-holder">
+										<label for="message1">message</label>
+										<div class="input-holder">
+											<textarea id="message1"></textarea>
+											<p>By submitting this form I agree to <a href="#terms-of-user" class="termsOfUse lightbox">Terms of Use</a></p>
+										</div>
+									</div>
+									<button type="submit">SEND</button>
+								</form>
+							</div>
+						</div>
+						<div class="overview-section">
+							<span class="small-heading full-width">Agent Overview</span>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+							<p>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+						<div class="extra-feature-section">
+							<span class="small-heading">PropertIES LISTING</span>
+							<div class="layout">
+								<div class="col">
+									<span class="small-heading">For Sale</span>
+									<ul class="list">
+										<li><span><span class="icon-home2"></span>Houses</span><span>1</span></li>
+										<li><span><span class="icon-plot"></span>Residential Plots</span>1<span></span></li>
+										<li><span><span class="icon-paperclip-tool"></span>Offices</span><span>1</span></li>
+										<li><span><span class="icon-commercial"></span>Commercial Plots</span>1<span></span></li>
+										<li><span><span class="icon-front-store"></span>Shops</span><span>1</span></li>
+										<li><span><span class="icon-folder"></span>Plot Files</span><span>1</span></li>
+									</ul>
+								</div>
+								<div class="col">
+									<span class="small-heading">For Rent</span>
+									<ul class="list">
+										<li><span><span class="icon-home2"></span>Houses</span><span>1</span></li>
+										<li><span><span class="icon-plot"></span>Residential Plots</span>1<span></span></li>
+										<li><span><span class="icon-paperclip-tool"></span>Offices</span><span>1</span></li>
+										<li><span><span class="icon-commercial"></span>Commercial Plots</span>1<span></span></li>
+										<li><span><span class="icon-front-store"></span>Shops</span><span>1</span></li>
+										<li><span><span class="icon-folder"></span>Plot Files</span><span>1</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				<!--<div class="propertyDetail-page">
+					<div class="container">
+						<div class="detail-holder">
+							<div class="frame">
+								<div class="property-picture-holder">
+									<h1><span>22 marla House for-sale in Q Block DHA Phase 7</span></h1>
+									<div class="propertyImage-slider">
+										<a class="add-to-favorite added" href="#"><span class="icon-heart"></span></a>
+										<span class="premiumProperty text-upparcase">Premium</span>
+										<div class="mask">
+											<div class="slideset">
+												<div class="slide"><a href="images/img11.png" rel="lighbox" class="lightbox"><img src="images/img11.png" alt="image description"></a></div>
+											</div>
+											<span id="propertyImageCurrentSlide" class="current-num"></span>
+											<a href="#" class="propertyImage-slider-btn-prev"><span class="icon-left-arrow"></span></a>
+											<a href="#" class="propertyImage-slider-btn-next"><span class="icon-right-arrow"></span></a>
+										</div>
+										<div class="propertyImage-pagination">
+											<div class="propertyImage-mask">
+												<div class="propertyImage-slideset">
+													<div class="propertyImage-slide"><a href="#"><img src="images/img11.png" alt="image description"></a></div>
+												</div>
+												<span class="paginationCurrent-num-1"></span>
+												<a href="#" class="propertyImage-pagination-btn-prev-1"><span class="icon-left-arrow"></span></a>
+												<a href="#" class="propertyImage-pagination-btn-next-1"><span class="icon-right-arrow"></span></a>
+											</div>
+										</div>
+									</div>
+									<div class="layout">
+										<span class="views">View <span class="number">10155</span></span>
+										<ul class="star-rating">
+											<li><a href="#" class="one-star">star</a></li>
+											<li><a href="#" class="two-stars">star</a></li>
+											<li><a href="#" class="three-stars">star</a></li>
+											<li><a href="#" class="four-stars">star</a></li>
+											<li><a href="#" class="five-stars">star</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="info-blockProperty">
+									<strong class="price"><span>Rs</span>1.25 lakh</strong>
+									<div class="pictureHolder"><a href="#"><img src="images/img03.jpg" alt="image description"></a></div>
+									<span class="heading">JR Property</span>
+									<div class="layout">
+										<div class="pull-left">
+											<span class="trusted-agent"><span class="icon-premium-badge"></span>Trusted</span>
+											<ul class="star-rating">
+												<li><a href="#" class="one-star">star</a></li>
+												<li><a href="#" class="two-stars">star</a></li>
+												<li><a href="#" class="three-stars">star</a></li>
+												<li><a href="#" class="four-stars">star</a></li>
+												<li><a href="#" class="five-stars">star</a></li>
+											</ul>
+										</div>
+										<div class="pull-right">
+											<ul class="quick-links">
+												<li><a href="#callPopup" class="lightbox call-agent-btn" data-tel="03154379760"><span class="icon-phone"></span></a></li>
+												<li><a href="#sendEmail-popup" class="lightbox"><span class="icon-empty-envelop"></span></a></li>
+											</ul>
+										</div>
+									</div>
+									<span class="small-heading">Summary</span>
+									<ul class="sumery-list">
+										<li>
+											<span class="tag">Property ID</span>
+											<span class="quantity">123</span>
+										</li>
+										<li>
+											<span class="tag">Society</span>
+											<span class="quantity">123</span>
+										</li>
+										<li>
+											<span class="tag">Block</span>
+											<span class="quantity">123</span>
+										</li>
+										<li>
+											<span class="tag">Type</span>
+											<span class="quantity">123</span>
+										</li>
+										<li>
+											<span class="tag blue">Area</span>
+											<span class="quantity blue">123</span>
+										</li>
+										<li>
+											<span class="tag blue">Price</span>
+											<span class="quantity blue">123</span>
+										</li>
+									</ul>
+									<div class="layout">
+										<div class="pull-left">
+											<span class="timeOfAddedProperty">Property Added <b>3 days ago</b></span>
+										</div>
+										<div class="pull-right">
+											<ul class="public-ui-features text-capital">
+												<li>
+													<span>Bed</span>
+													<strong>5</strong>
+												</li>
+												<li>
+													<span>Bath</span>
+													<strong>8</strong>
+												</li>
+												<li>
+													<span>Rooms</span>
+													<strong>8</strong>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="overview-section">
+								<div class="layout">
+									<span class="small-heading">Property Overview</span>
+									<a href="#" onclick="window.print()" class="btn-hollow"><span class="icon-printer"></span>PRINT DETAILS</a>
+								</div>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+								<p>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+								<p>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							</div>
+							<div class="extra-feature-section">
+								<div class="extra-feature-holder">
+									<span class="small-heading">Property Features</span>
+									<div class="feature">
+										<span class="small-heading">Healthcare Recreational</span>
+										<ul class="feature-list">
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+										</ul>
+									</div>
+									<div class="feature">
+										<span class="small-heading">Healthcare Recreational</span>
+										<ul class="feature-list">
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+										</ul>
+									</div>
+									<div class="feature">
+										<span class="small-heading">Healthcare Recreational</span>
+										<ul class="feature-list">
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+										</ul>
+									</div>
+									<div class="feature">
+										<span class="small-heading">Healthcare Recreational</span>
+										<ul class="feature-list">
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+											<li>
+												<span class="text-feature">Bed</span>
+												<span class="stataus">5</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup-holder">
+						<div id="callPopup" class="lightbox call-agent generic-lightbox">
+							<span class="lighbox-heading">Phone Number</span>
+							<p></p>
+							<span class="information"><span class="icon-info"></span>When you call, don't forget to mention that you found this ad on Property42.pk</span>
+						</div>
+						<div id="sendEmail-popup" class="lightbox generic-lightbox">
+							<span class="lighbox-heading">Send Email</span>
+							<form class="inquiry-email-form">
+								<div class="field-holder">
+									<label for="name">Name</label>
+									<div class="input-holder"><input type="text" id="name"></div>
+								</div>
+								<div class="field-holder">
+									<label for="email">Email</label>
+									<div class="input-holder"><input type="email" id="email"></div>
+								</div>
+								<div class="field-holder">
+									<label for="phone">phone</label>
+									<div class="input-holder"><input type="tel" id="phone"></div>
+								</div>
+								<div class="field-holder">
+									<label for="subject">subject</label>
+									<div class="input-holder"><input type="text" id="subject"></div>
+								</div>
+								<div class="field-holder">
+									<label for="message">message</label>
+									<div class="input-holder">
+										<textarea id="message"></textarea>
+										<p>By submitting this form I agree to <a href="#terms-of-user" class="termsOfUse lightbox">Terms of Use</a></p>
+									</div>
+								</div>
+								<button type="submit">SEND</button>
+							</form>
+						</div>
+					</div>
+				</div>-->
+			</div>
+		</main>
+		<footer id="footer">
+			<div class="footer-holder">
+				<div class="container">
+					<div class="col">
+						<h1><span>Get in</span> Touch</h1>
+						<form class="submit-query">
+							<div class="input-holder"><input type="text" placeholder="Name" ></div>
+							<div class="input-holder"><input type="email" placeholder="Email"></div>
+							<div class="input-holder"><input type="tel" placeholder="Phone" value=""></div>
+							<div class="input-holder"><input type="text" placeholder="Subject"></div>
+							<textarea placeholder="Your message"></textarea>
+							<button type="submit">Send email <span class="icon-arrow-right"></span></button>
+						</form>
+					</div>
+					<div class="col">
+						<ul class="social-plugins">
+							<li><div class="fb-page" data-href="https://www.facebook.com/proerty92pk-354399088098995/" data-tabs="timeline" data-height="382" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/proerty92pk-354399088098995/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/proerty92pk-354399088098995/">proerty92.pk</a></blockquote></div></li>
+							<li><a class="twitter-timeline" data-height="384" href="https://twitter.com/92nugree">Tweets by 92nugree</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottom-footer">
+					<span class="rights">&copy;2016 <a href="#">nugree.com</a> All rights reserved</span>
+					<ul class="social-icons">
+						<li><a href="#"><span class="icon-facebook"></span></a></li>
+						<li><a href="#"><span class="icon-google-plus-symbol"></span></a></li>
+						<li><a href="#"><span class="icon-linkedin"></span></a></li>
+						<li><a href="#"><span class="icon-twitter"></span></a></li>
+						<li><a href="#"><span class="icon-instagram"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<a href="#submit-requirement-popup" class="submit-requirement lightbox">Share <span class="hidden-xs">your</span> requirement</a>
+		<a href="#alerts-nugree" class="lightbox btn-alerts-nugree"></a>
+	</div>
+	<nav id="nav">
+		<a class="navigation-toggler close"><span class="icon-cross"></span></a>
+		<form class="searchByID hidden">
+			<input type="search" placeholder="Search by ID">
+			<button type="submit"><span class="icon-search"></span></button>
+		</form>
+		<ul class="main-navigation text-upparcase">
+			<li class="active">
+				<a href="#">HOME</a>
+			</li>
+			<li>
+				<a href="#">Properties</a>
+			</li>
+			<li>
+				<a href="#">AGENTS</a>
+			</li>
+			<li>
+				<a href="#about-us" class="back-to-top">ABOUT</a>
+			</li>
+			<li>
+				<a href="#footer" class="back-to-top">CONTACT</a>
+			</li>
+		</ul>
+		<div class="mobile-content text-center">
+			<ul class="social-icons">
+				<li><a href="#"><span class="icon-facebook"></span></a></li>
+				<li><a href="#"><span class="icon-google-plus-symbol"></span></a></li>
+				<li><a href="#"><span class="icon-linkedin"></span></a></li>
+				<li><a href="#"><span class="icon-twitter"></span></a></li>
+				<li><a href="#"><span class="icon-instagram"></span></a></li>
+			</ul>
+			<span class="copyright">Copyright, <a href="#">nugree.com</a></span>
+		</div>
+	</nav>
+	<div class="nav-blur-area">
+		<div class="logo-holder"><img src="images/logo.png" alt="Property42"></div>
+		<ul class="bottom-links">
+			<li><a href="#">www.nugree.com</a></li>
+			<li><a class="mail" href="mailto:&#105;&#110;&#102;&#111;&#064;&#110;&#117;&#103;&#114;&#101;&#101;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#110;&#117;&#103;&#114;&#101;&#101;&#046;&#099;&#111;&#109;</a></li>
+		</ul>
+	</div>
+	<div class="popup-holder">
+		<div id="submit-requirement-popup" class="lightbox generic-lightbox">
+			<span class="lighbox-heading">Submit you <span>requirement</span></span>
+			<form class="inquiry-email-form">
+				<div class="field-holder">
+					<label for="requirement-name">Name</label>
+					<div class="input-holder"><input type="text" id="requirement-name"></div>
+				</div>
+				<div class="field-holder">
+					<label for="requirement-email">Email</label>
+					<div class="input-holder"><input type="email" id="requirement-email"></div>
+				</div>
+				<div class="field-holder">
+					<label for="requirement-phone">Mobile</label>
+					<div class="input-holder"><input type="tel" id="requirement-phone"></div>
+				</div>
+				<div class="field-holder">
+					<label for="requirement-subject">Purpose</label>
+					<div class="input-holder"><input type="text" id="requirement-subject"></div>
+				</div>
+				<div class="field-holder">
+					<label for="requirement-message">Message</label>
+					<div class="input-holder">
+						<textarea id="requirement-message"></textarea>
+						<p>By submitting this form I agree to <a href="#terms-of-user" class="termsOfUse lightbox">Terms of Use</a></p>
+					</div>
+				</div>
+				<button type="submit">SEND</button>
+			</form>
+		</div>
+		<div id="join-us-pro" class="lightbox generic-lightbox">
+			<span class="lighbox-heading">Join us for <span>Project</span></span>
+			<form class="inquiry-email-form">
+				<div class="field-holder">
+					<label for="join-name">Name</label>
+					<div class="input-holder"><input type="text" id="join-name"></div>
+				</div>
+				<div class="field-holder">
+					<label for="join-email">Email</label>
+					<div class="input-holder"><input type="email" id="join-email"></div>
+				</div>
+				<div class="field-holder">
+					<label for="join-phone">Mobile</label>
+					<div class="input-holder"><input type="tel" id="join-phone"></div>
+				</div>
+				<div class="field-holder">
+					<label for="purpose-id">Purpose</label>
+					<div class="input-holder">
+						<span class="fake-select">
+							<select id="purpose-id">
+								<option>1</option>
+								<option>1</option>
+								<option>1</option>
+								<option>1</option>
+							</select>
+						</span>
+					</div>
+				</div>
+				<div class="field-holder">
+					<label for="join-address">Address</label>
+					<div class="input-holder"><input type="text" id="join-address"></div>
+				</div>
+				<div class="field-holder">
+					<label for="join-message">Message</label>
+					<div class="input-holder">
+						<textarea id="join-message"></textarea>
+						<p>By submitting this form I agree to <a href="#terms-of-user" class="termsOfUse lightbox">Terms of Use</a></p>
+					</div>
+				</div>
+				<button type="submit">SEND</button>
+			</form>
+		</div>
+		<div id="alerts-nugree" class="lightbox generic-lightbox alert-ligthbox-onload">
+			<p>" BEST FEATURES OF <span>NUGREE.COM</span> STILL TO COME KEEP VISITING "</p>
+			<a href="#" class="close"></a>
+		</div>
+	</div>
+	<script src="js/smooth-scroll.js" type="text/javascript" defer></script>
+	<script src="js/star-rating.js" type="text/javascript" defer></script>
+	<script src="js/select2.full.js" type="text/javascript" defer></script>
+	<script src="js/jquery.carousel.js" type="text/javascript" defer></script>
+	<script src="js/jquery.slideshow.js" type="text/javascript" defer></script>
+	<script src="js/placeholder.js" type="text/javascript" defer></script>
+	<script src="js/fixed-block.js" type="text/javascript" defer></script>
+	<script src="js/lightBox.js" type="text/javascript" defer></script>
+	<script src="js/jquery-main.js" type="text/javascript" defer></script>
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+</body>
+<div id="fb-root"></div>
+<script>
+
+var client = algoliasearch('1RY9U48QD0', '736d29f5a2b6e538c1b0163761fde425');
+    var index = client.initIndex('nugree_locations');
+    $(document).ready(function() {
+        $(".js-data-example-ajax").select2({
+            placeholder: 'search for locations',
+            ajax: {
+                //url: "https://api.github.com/search/repositories",
+                //url: "http://localhost/algolia_test/api.php",
+                dataType: 'json',
+                delay: 250,
+                transport: function (params) {
+                    var q = params.data.query;
+                    delete params.data.query;
+                    index.search(q, params.data).then(function (content) {
+                        params.success(content);
+                    });
+                },
+                data: function (term, page) {
+                    return {query: term, hitsPerPage: 10, page: (page - 1)};
+                },
+                processResults: function (data, params) {
+                    // parse the results into the format expected by Select2
+                    // since we are using custom formatting functions we do not need to
+                    // alter the remote JSON data, except to indicate that infinite
+                    // scrolling can be used
+                    params.page = params.page || 1;
+
+                    return {
+                        results: data.hits,
+                        pagination: {
+                            more: (params.page * 30) < data.nbHits
+                        }
+                    };
+                },
+                cache: true
+            },
+            multiple:true,
+            escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+            minimumInputLength: 1,
+            formatResult: function(location) {
+                return "<p class='select2-user-result'>" +
+                        location.location +
+                        "</p>";
+            },
+            formatSelection: function(location) {
+                return location.location;
+            }
+        });
+
+    });
+
+	(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+</html>
