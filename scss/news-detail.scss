@@ -1,0 +1,55 @@
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px,
+  'tvscreen':1540px,
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/helpers';
+
+.news-full-page-ui {
+    position: relative;
+
+    .col-holder {
+        @extend %layout;
+        margin: 0 -10px;
+    }
+    .col {
+        width: 40%;
+        padding: 0 10px;
+        @extend %pull-left;
+
+        &:first-child {
+            width: 60%;
+        }
+    }
+    .trend-news {
+        @extend %listreset;
+
+        li {
+            display: block;
+        }
+        time, span {
+            display: block;
+        }
+    }
+}
