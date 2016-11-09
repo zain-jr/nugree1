@@ -329,6 +329,7 @@ $media-expressions: (
     }
   }
   .propertyImage-slide {
+    @extend %text-center;
     &.active {
       a{
         &:after{ @extend .hidden;}
@@ -353,7 +354,6 @@ $media-expressions: (
       width: 20% !important;
 
       img {
-        max-width: 155px;
         max-height: 95px;
 
         @include media('<widescreen'){
@@ -376,11 +376,24 @@ $media-expressions: (
   .propertyImage-slider-btn-prev, .propertyImage-slider-btn-next,
   .propertyImage-pagination-btn-prev-1, .propertyImage-pagination-btn-next-1 {
     position: absolute;
-    top: 50%;
-    left: 10px;
+    top: 0;
+    height: 100%;
+    white-space: nowrap;
+    left: 0;
     text-decoration: none;
-    margin: -20px 0 0;
+    color: $p42-color;
+    padding: 10px;
     display: none;
+
+    &:after {
+      content: '';
+      height: 100%;
+      overflow: hidden;
+      margin: 0 0 0 -5px;
+      width: 1px;
+      @include align(middle);
+    }
+    
 
     @include media('<tablet'){
       display: none !important;
@@ -389,11 +402,13 @@ $media-expressions: (
     span[class^="icon-"],span[class*="icon-"]{
       font-size: 40px;
       line-height: 1;
+      @include align(middle);
+      white-space: normal;
     }
   }
   .propertyImage-slider-btn-next, .propertyImage-pagination-btn-next-1 {
     left: auto;
-    right: 20px;
+    right: 10px;
   }
   .overview-section {
     @extend %layout;

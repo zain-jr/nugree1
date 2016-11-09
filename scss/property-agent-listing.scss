@@ -420,7 +420,7 @@ $media-expressions: (
       @extend %layout;
       @extend %pull-left;
       max-width: 315px;
-      background: $p42-background;
+      border: 2px solid darken($p42-background, 5%);
 
       @include media('<tvscreen'){
         max-width: 300px;
