@@ -26,6 +26,7 @@ $media-expressions: (
 @import 'base/mixins';
 @import 'base/helpers';
 
+.register-qucik-ui,
 .login-page {
     @extend %layout;
     background: rgba($p42-background, 0.5);
@@ -41,6 +42,7 @@ $media-expressions: (
         margin: 0 -15px;
     }
 }
+.register-qucik-form-ui,
 .forgot-form,
 .login-form {
     @extend %layout;
