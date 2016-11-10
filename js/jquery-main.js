@@ -20,6 +20,12 @@ $(document).ready(function() {
 		$('.propertyImage-slider ').find('.slide a').removeClass('lightbox');
 		$('.propertyImage-slider ').find('.slide a').removeAttr('rel href'); 
 	}
+	if($('.other-news').find('.slide').length <= 4){
+		$(this).find('.btn-prev, .btn-next').remove();
+	}
+	if($('.detail-news-slider').find('.slide').length == 1){
+		$(this).find('.btn-prev, .btn-next').remove();
+	}
 	$(window).trigger('scroll');
 	imageAdjustment();
 
@@ -221,6 +227,22 @@ function initCarousel() {
 		stretchSlideToMask: true,
 		switchTime: 2000,
 		animSpeed: 600
+	});
+	jQuery('.other-news').scrollGallery({
+		mask: '.mask',
+		slider: '.slideset',
+		slides: '.slide',
+		currentNumber: 'span.cur-num',
+		totalNumber: 'span.all-num',
+		disableWhileAnimating: true,
+		circularRotation: true,
+		pauseOnHover: true,
+		autoRotation: false,
+		maskAutoSize: false,
+		stretchSlideToMask: true,
+		switchTime: 2000,
+		animSpeed: 600,
+		step: 1
 	});
 }
 
