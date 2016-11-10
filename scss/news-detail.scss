@@ -28,6 +28,7 @@ $media-expressions: (
 
 .news-full-page-ui {
     position: relative;
+    padding: 30px 15px 0;
 
     .col-holder {
         @extend %layout;
@@ -38,8 +39,54 @@ $media-expressions: (
         padding: 0 10px;
         @extend %pull-left;
 
+        h1 {
+            padding: 10px;
+            margin: 0 0 40px;
+            background: $p42-color;
+            color: $white;
+            font-weight: 400;
+        }
+
+        .plugin-date-ui {
+            @extend %layout;
+            margin: 0 -5px;
+
+            .side {
+                @extend %pull-left;
+                width: 50%;
+                padding: 5px;
+
+                ul {
+                    @extend %listreset;
+                    @include align-reset(top, 12,15);
+                    margin: 0 -5px;
+                    
+
+                    li {
+                        padding: 0 5px;
+                    }
+                }
+            }
+        }
+
         &:first-child {
             width: 60%;
+
+            h1 {
+                background: lighten($black, 15%);
+                color: $white;
+                position: relative;
+                font-weight: 600;
+
+                &:after {
+                    position: absolute;
+                    bottom: -40px;
+                    left: 50px;
+                    border: 15px solid transparent;
+                    border-top: 25px solid  lighten($black, 15%);
+                    content: '';
+                }
+            }
         }
     }
     .trend-news {
@@ -47,9 +94,115 @@ $media-expressions: (
 
         li {
             display: block;
+            padding: 3px;
+
+            a {
+                @include align(top);
+                text-decoration: none;
+                color: $black;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
         time, span {
             display: block;
+        }
+        time {
+            color: $p42-color;
+            @include font(20,24);
+            margin: 0 0 10px;
+        }
+        span {
+            color: $p42-default-grey;
+            @include font(25,28);
+            margin: 0 0 10px;
+        }
+    }
+    .subscribe-area {
+        border: 1px solid $p42-color;
+        border-radius: 4px;
+        @extend %text-left;
+        padding: 20px;
+
+        strong, span { display: block;}
+        .heading {
+            position: relative;
+            color: $p42-color;
+            @include font(25,28);
+            @extend %text-left;
+            padding: 10px 10px 0 30px;
+            margin: 0 0 10px;
+
+            span {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                margin: -7px 0 0;
+            }
+        }
+        .slogan {
+            color: $black;
+            @include font(16,20);
+            margin: 0 0 10px;
+        }
+        form {
+            position: relative;
+
+            input{
+                @include squar(100%, 40px);
+                border: 1px solid darken(#edecec, 20%);
+                padding: 6px 10px;
+                background: #edecec;
+                transition: border 0.5s ease;
+                -webkit-transition: border 0.5s ease;
+                -moz-transition: border 0.5s ease;
+                @include font(18,21);
+
+                &:focus {
+                    border: 1px solid $sharp-green;
+                }
+            }
+            .input-holder {
+                margin: 0 0 10px;
+            }
+            button {
+                display: block;
+                border: 0;
+                background: transparent;
+                @include font(20,22);
+                padding: 0;
+                margin: 0 0 0 auto;
+
+                span {
+                    @include align(top);
+                    padding: 10px;
+                    position: relative;
+                    background: $p42-color;
+                    color: $white;
+                    z-index: 1;
+
+                    &:after {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: $sharp-green;
+                        content: '';
+                        z-index: -1;
+                        pointer-events: none;
+                        transition: top 0.5s ease;
+                        -webkit-transition: top0.5s ease;
+                        -moz-transition: top 0.5s ease;
+                        -ms-transition: top 0.5s ease;
+                    }
+                }
+                 &:hover {
+                    span{ &:after { top: 0;}}
+                }
+            }
         }
     }
 }
