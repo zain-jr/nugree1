@@ -33,11 +33,27 @@ $media-expressions: (
     .col-holder {
         @extend %layout;
         margin: 0 -10px;
+
+        @include media('<desktop'){
+            margin: 0 -5px;
+        }
+        @include media('<tablet'){
+            margin: 0;
+        }
     }
     .col {
         width: 40%;
         padding: 0 10px;
         @extend %pull-left;
+
+        @include media('<desktop'){
+            padding: 0 5px;
+        }
+        @include media('<tablet'){
+            width: 100%;
+            padding: 5px 0;
+            float: none !important;
+        }
 
         h1 {
             padding: 10px;
@@ -45,6 +61,14 @@ $media-expressions: (
             background: $p42-color;
             color: $white;
             font-weight: 400;
+
+            @include media('<widescreen'){
+                @include font(25,28);
+            }
+        }
+        h2 {
+            @include font(24,27);
+            font-weight: 600;
         }
 
         .plugin-date-ui {
@@ -55,6 +79,12 @@ $media-expressions: (
                 @extend %pull-left;
                 width: 50%;
                 padding: 5px;
+
+                time {
+                    @include media('<widescreen'){
+                        @include font(12,15);
+                    }
+                }
 
                 ul {
                     @extend %listreset;
@@ -71,6 +101,10 @@ $media-expressions: (
 
         &:first-child {
             width: 60%;
+
+            @include media('<tablet'){
+                width: 100%;
+            }
 
             h1 {
                 background: lighten($black, 15%);
@@ -113,11 +147,19 @@ $media-expressions: (
             color: $p42-color;
             @include font(16,20);
             margin: 0 0 10px;
+
+            @include media('<widescreen'){
+                @include font(14,18);
+            }
         }
         span {
             color: $p42-default-grey;
             @include font(25,28);
             margin: 0 0 10px;
+
+            @include media('<widescreen'){
+                @include font(17,20);
+            }
         }
     }
     .subscribe-area {
@@ -134,6 +176,10 @@ $media-expressions: (
             @extend %text-left;
             padding: 10px 10px 0 30px;
             margin: 0 0 10px;
+
+            @include media('<widescreen'){
+                @include font(18,22);
+            }
 
             span {
                 position: absolute;
@@ -224,6 +270,8 @@ $media-expressions: (
         @extend %layout;
         @extend %container;
         margin: 0 -5px;
+
+        @include media('<tablet'){ margin: 0;}
     }
     .slideset {
         width: 100% !important;
@@ -242,6 +290,10 @@ $media-expressions: (
         font-size: 12px;
         line-height: 15px;
         padding: 0 5px;
+
+        @include media('<tablet'){
+            width: 100% !important;
+        }
     }
     .slide-holder {
         display: block;
@@ -250,6 +302,10 @@ $media-expressions: (
         text-decoration: none;
         @extend %text-left;
         padding: 10px 5px;
+
+        @include media('<tablet'){
+            padding: 10px 0;
+        }
     }
     .img-holder {
         border: 1px solid $p42-color;
@@ -263,6 +319,10 @@ $media-expressions: (
         @extend %text-left;
         margin: 0;
         padding: 5px 0;
+
+        @include media('<tablet'){
+            @include font(16,20);
+        }
     }
     time {
         color: $black;
@@ -277,9 +337,11 @@ $media-expressions: (
         margin: -25px 0 0;
         text-decoration: none;
 
+        @include media('<tablet'){ display: none;}
+
         span {
-        font-size: 50px;
-        line-height: 1;
+            font-size: 50px;
+            line-height: 1;
         }
     }
     .btn-next {
