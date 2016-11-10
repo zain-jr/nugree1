@@ -652,14 +652,21 @@ $media-expressions: (
     position: relative;
     display: block;
     width: 100%;
-    padding: 30px 120px 112px 0;
+    padding: 30px 120px 96px 0;
 
     @include media('<widescreen'){
-      padding: 18px 70px 51px 0;
+      padding: 18px 70px 60px 0;
     }
 
     @include media('<tablet'){
       display: none;
+    }
+    .added-time {
+      @include align(top);
+      @include font(15,20);
+      font-style: italic;
+      padding: 5px 0 0;
+      color: $darken-grey;
     }
   }
 }
