@@ -428,10 +428,6 @@ h2 {
     @include align-reset(top,14,18);
     @extend %text-upparcase;
 
-    @include media('<desktop'){
-      @include align-reset(top,23,23);
-    }
-
     @include media('<tablet'){
       @include align-reset(top,12,15);
 
