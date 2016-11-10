@@ -386,10 +386,9 @@ h2 {
 
   @include media('<tablet'){
     padding: 0 0 0 60px;
-
-    .filters-active &{
-      z-index: 9998;
-    }
+  }
+  .filters-active &{
+    z-index: 9998;
   }
 
   .right-area {
@@ -3287,10 +3286,9 @@ h2 {
     background: $p42-color;
     height: auto;
     padding: 10px 5px;
-
-    .filters-active & {
-      display: none;
-    }
+  }
+  .filters-active & {
+    display: none;
   }
 }
 .detail-news-slider {
