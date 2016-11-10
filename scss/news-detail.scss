@@ -28,7 +28,7 @@ $media-expressions: (
 
 .news-full-page-ui {
     position: relative;
-    padding: 30px 15px 0;
+    padding: 30px 15px;
 
     .col-holder {
         @extend %layout;
@@ -251,6 +251,9 @@ $media-expressions: (
         @extend %text-left;
         padding: 10px 5px;
     }
+    .img-holder {
+        border: 1px solid $p42-color;
+    }
     img{
         @extend %img-res;
     }
@@ -270,7 +273,7 @@ $media-expressions: (
         background: rgba($black, 0.7);
         position: absolute;
         top: 50%;
-        left:20px;
+        left:0;
         margin: -25px 0 0;
         text-decoration: none;
 
@@ -281,6 +284,6 @@ $media-expressions: (
     }
     .btn-next {
         left: auto;
-        right: 30px;
+        right: 0;
     }
 }
