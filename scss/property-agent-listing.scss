@@ -46,10 +46,6 @@ $media-expressions: (
       box-shadow: none;
       padding: 10px 5px;
     }
-    #content {
-      width: 100%;
-      padding: 0;
-    }
     .top-head {
       cursor: pointer;
       background: $sharp-green !important;
@@ -103,6 +99,11 @@ $media-expressions: (
         @include media('<desktop'){
           width: 100%;
           float: none;
+        }
+        &:hover {
+          .slide {
+            background: lighten($p42-background, 4%);
+          }
         }
 
         &:first-child{
@@ -192,13 +193,14 @@ $media-expressions: (
        padding: 0;
     }
   }
-
+#aside-holder {
+  width: 25%;
+  @extend .pull-left;
+}
   #aside {
-    width: 25%;
     padding: 10px 10px 40px;
     position: relative;
-    @extend .pull-left;
-    overflow: hidden;
+    @extend %layout;
     background: $p42-background;
     box-shadow: 0 0 20px -9px rgba($black, 0.5);
 
@@ -980,4 +982,17 @@ $media-expressions: (
     }
   }
   p { opacity: 0.5;}
+}
+.banners {
+  @extend %layout;
+  padding: 0;
+
+  @include media('<desktop'){ display: none;}
+
+  a,
+  li {
+    display: block;
+  }
+  li { margin: 0 0 10px;}
+  img { @extend %img-res;}
 }
