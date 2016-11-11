@@ -6,6 +6,9 @@ $(document).ready(function() {
 			$(this).attr('href', 'tel:'+mobileNumber)
 		});
 	}
+	if (screen.width < 1024){
+		$('.agent-listing-page, .listing-page').removeClass('sticky-sidBar');
+	}
 	if($('.publicProperty-post, .publicAgent-post').length == 0){
 		$('.propertyNotFound').removeClass('hidden');
 		$('.pager, .sort-by').remove();
@@ -25,6 +28,13 @@ $(document).ready(function() {
 	}
 	if($('.detail-news-slider').find('.slide').length == 1){
 		$(this).find('.btn-prev, .btn-next').remove();
+	}
+	if($('.agent-listing-page, .listing-page').hasClass("sticky-sidBar")){
+		$(document).on('click', '.top-head', function(){
+			$(this).toggleClass('active');
+			$('.filter-form').slideToggle();
+			$('.filters-links').find('.fromTo').removeClass('full-width');
+		})
 	}
 	$(window).trigger('scroll');
 	imageAdjustment();
