@@ -35,6 +35,13 @@ $media-expressions: (
   &.sticky-sidBar {
     padding: 70px 0;
 
+    #aside-holder {
+      @extend %pull-right;
+    }
+    #content {
+      padding: 0 20px 0 0;
+    }
+
     #aside {
       position: fixed;
       top: 73px;
