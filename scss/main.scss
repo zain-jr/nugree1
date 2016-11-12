@@ -2654,17 +2654,21 @@ h2 {
 }
 .public-ui-features {
   @extend %listreset;
-  @include align-reset(top, 16,20);
+  @include align-reset(top, 14,17);
   font-weight: 400;
 
   li {
     padding: 0 3px 6px;
   }
+  i[class^="fa"], i[class*="fa"]{
+    @include align(middle);
+    padding:0 5px;
+  }
   span {
+    padding: 2px;
     background: $p42-background;
     color: $p42-default-grey;
     @include align(top);
-    padding: 0 5px 0 0;
   }
 }
 .listing-image-slider {

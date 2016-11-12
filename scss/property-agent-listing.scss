@@ -201,8 +201,12 @@ $media-expressions: (
     }
   }
 #aside-holder {
-  width: 25%;
+  width: 20%;
   @extend .pull-left;
+
+  .banners {
+    @include media('<desktop'){ display: none;}
+  }
 }
   #aside {
     padding: 10px 10px 40px;
@@ -279,7 +283,7 @@ $media-expressions: (
     }
   }
   #content {
-    width: 75%;
+    width: 60%;
     @extend .pull-left;
     padding: 0 0 0 20px;
 
@@ -288,11 +292,14 @@ $media-expressions: (
     }
 
     @include media('<desktop'){
-      width: 100%;
+      width: 80%;
       overflow: hidden;
       display: block;
       margin: 0 0 20px;
       padding: 0;
+    }
+    @include media('<tablet'){
+      width: 100%;
     }
     .sort-by {
       @extend %layout;
@@ -310,7 +317,7 @@ $media-expressions: (
       }
 
       .fake-select {
-        width: 250px;
+        width: 150px;
         float: right;
         border: 1px solid $p42-color;
 
@@ -548,7 +555,6 @@ $media-expressions: (
       @extend %layout;
       @extend %pull-left;
       max-width: 315px;
-      border: 2px solid darken($p42-background, 5%);
 
       @include media('<tvscreen'){
         max-width: 300px;
@@ -594,17 +600,20 @@ $media-expressions: (
     }
     .caption {
       @extend %layout;
-      @include font(16,20);
+      @include font(14,20);
       color: $p42-default-grey;
-      padding: 0 10px 0 20px;
+      padding: 0 10px 0;
 
       @include media('<widescreen'){
         padding: 0 10px;
       }
+      @include media('<tablet'){
+        padding: 0 5px;
+      }
 
       h1 {
         margin: 5px 0 10px;
-        font-weight: 700;
+        font-weight: 600;
         color: $p42-color;
         @include font(18,21);
         @extend %text-left;
@@ -663,8 +672,8 @@ $media-expressions: (
       }
       .links-holder {
         position: absolute;
-        bottom: 10px;
-        left: 339px;
+        bottom: 5px;
+        left: 325px;
         right: 0;
         @extend %layout;
         padding: 0 60px 0 0;
@@ -681,12 +690,27 @@ $media-expressions: (
           padding: 0;
         }
 
+        
+        .added-time {
+          display: block;
+          width: 100%;
+          @include font(12,15);
+          font-style: italic;
+          padding: 10px 5px;
+          color: $darken-grey;
+          
+          @include media('<tablet'){
+            padding: 5px;
+          }
+        }
+
         .add-to-favorite {
           position: absolute;
-          top: 0;
+          top: 35px;
           right: 0;
           bottom: 0;
           height: auto;
+          background: transparent;
 
           @include media('<tablet'){
             left: 0;
@@ -696,7 +720,7 @@ $media-expressions: (
           }
 
           span {
-            line-height: 50px;
+            line-height: 41px;
 
             @include media('<desktop'){
               line-height: 42px;
@@ -709,7 +733,7 @@ $media-expressions: (
           border: 1px solid $p42-default-grey;
           background: transparent;
           color: $p42-default-grey;
-          padding: 14px 50px 14px 20px;
+          padding: 12px 35px 12px 10px;
 
           @include media('<tvscreen'){
             padding: 12px 40px 13px 10px;
@@ -737,23 +761,23 @@ $media-expressions: (
             }
           }
           a {
-            padding: 11px 30px;
+            padding: 9px 10px;
 
             @include media('<tvscreen'){
               padding: 11px 7px;
             }
             @include media('<tablet'){
-              padding: 7px 5px;
+              padding: 7px 3px;
             }
           }
         }
       }
       .company-logo {
-        @extend img-res;
         @extend .pull-right;
-        max-width: 100px;
-        max-height: 100px;
-        margin: 0 10px;
+        @extend img-res;
+        max-width: 90px;
+        max-height: 90px;
+        margin: -13px 10px 0;
         position: absolute;
         top: 0;
         right: 0;
@@ -780,7 +804,7 @@ $media-expressions: (
     position: relative;
     display: block;
     width: 100%;
-    padding: 30px 120px 96px 0;
+    padding: 30px 120px 77px 0;
 
     @include media('<widescreen'){
       padding: 18px 70px 60px 0;
@@ -788,13 +812,6 @@ $media-expressions: (
 
     @include media('<tablet'){
       display: none;
-    }
-    .added-time {
-      @include align(top);
-      @include font(15,20);
-      font-style: italic;
-      padding: 5px 0 0;
-      color: $darken-grey;
     }
   }
 }
@@ -994,7 +1011,12 @@ $media-expressions: (
   @extend %layout;
   padding: 0;
 
-  @include media('<desktop'){ display: none;}
+  &.right-banners {
+    @extend %pull-right;
+    width: 18%;
+  }
+
+  @include media('<tablet'){ display: none;}
 
   a,
   li {
