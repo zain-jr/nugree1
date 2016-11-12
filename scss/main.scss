@@ -2509,16 +2509,15 @@ h2 {
   float: right;
   @extend %text-center;
 
-  span {
+  i {
     font-size: 20px;
     line-height: 34px;
-    opacity: 0.5;
     @include align(middle);
+    color: $darken-grey;
   }
 
   &.added {
-    color: $green;
-    span { opacity: 1;}
+    color: $p42-color;
   }
 }
 .premiumProperty {

@@ -719,7 +719,7 @@ $media-expressions: (
             background: transparent;
           }
 
-          span {
+          i {
             line-height: 41px;
 
             @include media('<desktop'){
