@@ -2515,9 +2515,37 @@ h2 {
     @include align(middle);
     color: $darken-grey;
   }
-
+  .fa-heart {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease; 
+  }
+  .fa-heart-o {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    width: 0;
+    transition: transform, width 0.5s ease;
+    -webkit-transition: transform, width 0.5s ease;
+    -moz-transition: transform, width 0.5s ease;
+  }
   &.added {
     color: $p42-color;
+
+    .fa-heart {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      color: $p42-color;
+    }
+    .fa-heart-o {
+      transform: scale(0);
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+    }
   }
 }
 .premiumProperty {
