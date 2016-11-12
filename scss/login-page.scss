@@ -41,6 +41,56 @@ $media-expressions: (
     .global-success {
         margin: 0 -15px;
     }
+    .text-or {
+        display: block;
+        color: $dim-grey;
+        font-weight: 600;
+        @extend %text-center;
+        margin: 20px 0;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            content: '';
+            margin: -1px 0 0;
+            background: $dim-grey;
+        }
+        span {
+            padding: 0 20px;
+            background: $p42-background;
+            @include align(top);
+            position: relative;
+            z-index: 5;
+        }
+    }
+    .fb-login {
+        color: $white;
+        background: #3c5c95;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 4px;
+        padding: 5px 20px 5px 30px;
+        position: relative;
+        transition: background 0.5s ease;
+        -webkit-transition: background 0.5s ease;
+        -moz-transition: background 0.5s ease;
+        
+        span {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            font-size: 20px;
+            line-height: 1;
+            margin: -10px 0 0;
+        }
+        &:hover {
+            background: darken(#3c5c95, 10%);
+        }
+    }
 }
 .register-qucik-form-ui,
 .forgot-form,
@@ -152,7 +202,7 @@ $media-expressions: (
                 color: $white;
                 @extend %text-center;
                 background: $p42-default-grey;
-                padding: 15px;
+                padding: 10px;
 
                 @include media('<tablet'){
                     padding: 10px 5px;
@@ -171,7 +221,7 @@ $media-expressions: (
         background: $p42-color;
         color: $white;
         @include font(18,22);
-        padding: 15px;
+        padding: 10px;
 
         @include media('<tablet'){
             @include font(14,17);
