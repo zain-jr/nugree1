@@ -482,8 +482,6 @@ h2 {
             padding: 10px;
             border-right: 1px solid $white;
 
-            .fixed-ui-mob-full & { width: 100%; border: 0;}
-
             span {
               display: inline-block !important;
               vertical-align: top;
@@ -1435,18 +1433,31 @@ h2 {
   @extend %container;
   margin:  0 auto 20px;
   @extend %text-center;
-  
-  .caption {
-    @extend %text-left;
-  }
+  position: relative;
+
   a, img {
     @extend %text-center;
     display: block;
   }
+  .slide {
+    @extend %layout;
+    position: absolute;
+	  z-index: 1;
+
+    &.active {
+      z-index: 2;
+    }
+  }
+  a {
+    width: 50%;
+    float: left;
+    padding: 0 10px;
+  }
   img {
     display: block;
-    max-height: 150px;
+    max-height: 100px;
     margin: 0 auto;
+    width: 100%;
   }
 }
 .agent-logos {
@@ -3536,4 +3547,7 @@ h2 {
   .agent-detail-page .info-blockAgent .timeOfAddedProperty, .agent-detail-page .info-blockProperty .timeOfAddedProperty, .propertyDetail-page .info-blockAgent .timeOfAddedProperty, .propertyDetail-page .info-blockProperty .timeOfAddedProperty{
     padding: 10px 0 0 !important;
   }
+}
+#subiz_wrapper {
+  bottom: 50px !important;
 }
