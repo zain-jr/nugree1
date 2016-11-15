@@ -44,6 +44,8 @@ html {
   &.filters-active,
   &.nav-active {
     overflow-y: hidden;
+
+    .sbzon, .sbzoff { display: none !important}
   }
 }
 .select2-results .select2-no-results, .select2-results .select2-searching, .select2-results .select2-ajax-error, .select2-results .select2-selection-limit {
@@ -1451,6 +1453,9 @@ h2 {
   @include media('<desktop'){
     height: 200px;
   }
+  @include media('<tablet'){
+    height: 130px;
+  }
 
   a, img {
     @extend %text-center;
@@ -2338,7 +2343,7 @@ h2 {
     padding: 15px;
 
     @include media('<tablet'){
-       padding: 15px 15px 40px;
+       padding: 15px 15px 60px;
     }
 
     .rights {
