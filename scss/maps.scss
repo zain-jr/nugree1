@@ -26,5 +26,183 @@ $media-expressions: (
 @import 'base/mixins';
 @import 'base/helpers';
 .maps {
-    position: relative;   
+    position: relative;
+    margin: 25px auto;
+
+    h1 {
+      color: $white;
+      background: url('../images/map-heading-bg.jpg') no-repeat;
+      background-size: cover;
+      padding: 10px;
+      font-weight: 600;
+      @extend %text-upparcase;
+      margin: 0 0 25px;
+    }
+    .layout {
+      .tag {
+        @extend %pull-left;
+
+        @include media('<tablet'){
+          float: none !important;
+          display: block;
+          text-align: center;
+          margin: 0 0 10px;
+        }
+      }
+    }
+    .avail-ui {
+      display: block;
+      padding: 0 20px;
+
+      @include media('<tablet'){
+        @include font(12,15);
+        padding: 0;
+      }
+    }
+    .search-map {
+      @extend %pull-right;
+      background: #f5f5f5;
+      width: 335px;
+      position: relative;
+      box-shadow: inset 0 0 5px 1px rgba(#6c6d70, 0.5);
+
+      @include media('<tablet'){
+        float: none !important;
+        width: 100%;
+        margin: 0 0 10px;
+      }
+
+      input[type="text"],input[type="search"]{
+        border: 0;
+        background: transparent;
+        @include squar(100%, 42px);
+        padding: 8px 15px;
+        @include font(16,21);
+
+        @include placeholder { opacity: 1;}
+        &:focus {
+          @include placeholder {color: $black;}
+          ~ button { color: $black;}
+        }
+      }
+      button {
+        border: 0;
+        background: transparent;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+        color: #6c6d70;
+
+        @include media('<tablet'){ right: 30px;}
+
+        &:hover { color: $black;}
+      }
+    }
+    .tag {
+      display: block;
+      @include font(20,24);
+
+      @include media('<tablet'){
+        @include font(14,17);
+      }
+    }
+    .map-list {
+      @extend %listreset;
+      @include align-reset(top, 20,24);
+      @extend %container;
+      max-width: 1175px;
+      padding: 0;
+      margin: 20px auto 0;
+
+
+      li {
+        width: 25%;
+        padding: 0 20px 40px;
+
+        @include media('<desktop'){
+          padding: 0 5px 10px;
+        }
+        
+        @include media('<tablet'){
+          width: 50%;
+        }
+
+        a{
+          display: block;
+          color: $white;
+          text-decoration: none;
+          position: relative;
+
+          &:hover {
+            img {
+              opacity: 0.7;
+            }
+          }
+        }
+        img {
+          @extend %img-res;
+          max-height: 177px;
+        }
+        .title {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background: lighten($black, 10%);
+          @extend %text-center;
+          padding: 5px;
+
+          @include media('<tablet'){
+            @include font(12,15);
+          }
+        }
+      }
+    }
+    .text-center {
+      a{
+        @include align(top);
+        margin: 0 0 10px;
+        color: $p42-color;
+        @include font(18,21);
+      }
+    }
+    .viewed-maps {
+      @extend %layout;
+      @include align-reset(top, 16,19);
+      @extend %text-left;
+      margin: 0 -10px;
+      padding: 20px 0 0;
+      color: $light-blue;
+
+      .col {
+        width: 25%;
+        padding: 0 10px;
+
+        @include media('<tablet'){
+          width: 50%;
+          padding: 0 10px 10px;
+        }
+      }
+      .heading {
+        margin: 0 0 20px;
+        @include font(20, 24);
+        @extend %text-left;
+        font-style: italic;
+      }
+      ul {
+        @extend %listreset;
+
+        li {
+          margin: 0 0 10px;
+          display: block;
+        }
+        a {
+          text-decoration: none;
+          color: $p42-color;
+
+          &:hover { color: darken($p42-color, 20%);}
+        }
+      }
+    }
 }
