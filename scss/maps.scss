@@ -37,6 +37,10 @@ $media-expressions: (
       font-weight: 600;
       @extend %text-upparcase;
       margin: 0 0 25px;
+
+      @include media('<tablet'){
+        color: lighten($black, 20%);
+      }
     }
     .layout {
       .tag {
