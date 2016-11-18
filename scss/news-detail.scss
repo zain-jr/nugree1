@@ -106,7 +106,7 @@ $media-expressions: (
         }
 
         &:first-child {
-            width: 60%;
+            width: 55%;
 
             @include media('<tablet'){
                 width: 100%;
@@ -130,11 +130,28 @@ $media-expressions: (
         }
     }
     .trend-news {
-        @extend %listreset;
+        position: relative;
+        width: 100%;
+        @extend %layout;
+        height: 500px !important;
+        margin: 0 0 20px;
 
-        li {
-            display: block;
-            padding: 3px;
+        &:hover {
+            .btn-prev, .btn-next{ 
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .slideset{
+            width: 100%;
+        }
+        .mask {
+            height: 500px !important;
+        }
+        .slide {
+            float: none;
+            width: auto !important;
 
             a {
                 @include align(top);
@@ -146,12 +163,41 @@ $media-expressions: (
                 }
             }
         }
+        .btn-prev, .btn-next{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            color: $dark-grey;
+            @extend %text-center;
+            padding: 0;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+            -webkit-transition: opacity 0.6s ease, visibility 0.6s ease;
+            -moz-transition: opacity 0.6s ease, visibility 0.6s ease;
+
+            span {
+                font-size: 50px;
+                line-height: 1;
+                color: $white;
+                margin: 0;
+                padding: 0;
+                background: rgba($black, 0.5);
+                display: inline-block !important;
+            }
+        }
+        .btn-next {
+            top: auto;
+            bottom: 0;
+        }
         time, span {
             display: block;
         }
         time {
             color: $p42-color;
-            @include font(16,20);
+            @include font(13,16);
             margin: 0 0 10px;
 
             @include media('<widescreen'){

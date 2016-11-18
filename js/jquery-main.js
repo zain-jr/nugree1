@@ -255,6 +255,20 @@ function initCarousel() {
 		animSpeed: 600,
 		step: 1
 	});
+	jQuery('.trend-news').scrollGallery({
+		mask: '.mask',
+		slider: '.slideset',
+		slides: '.slide',
+		currentNumber: 'span.cur-num',
+		totalNumber: 'span.all-num',
+		disableWhileAnimating: true,
+		pauseOnHover: true,
+		autoRotation: true,
+		maskAutoSize: false,
+		switchTime: 2000,
+		animSpeed: 600,
+		vertical: true
+	});
 }
 
 // initialize fixed blocks on scroll
