@@ -1470,9 +1470,18 @@ h2 {
     @extend %layout;
     position: absolute;
 	  z-index: 1;
+    left: 0;
+    right: 0;
 
     &.active {
       z-index: 2;
+    }
+    &.one-banner {
+      a {
+        width: 100%;
+        display: block;
+        padding: 0;
+      }
     }
   }
   a {
@@ -1489,7 +1498,7 @@ h2 {
     display: block;
     max-height: 100px;
     margin: 0 auto;
-    width: 100%;
+    height: auto;
   }
 }
 .agent-logos {
