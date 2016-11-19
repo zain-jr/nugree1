@@ -3121,7 +3121,24 @@ h2 {
     max-width: 800px;
     margin: 10px auto;
 
-    li { padding: 0 5px;}
+    li {
+      padding: 0 5px;
+
+      &.wanted-holder {
+        padding:11px 5px;
+      }
+    }
+    
+    label.wantend-button {
+      @include align(middle);
+    }
+
+    .tag-want {
+      @include font(18,21);
+      font-style: italic;
+      @include align(middle);
+      padding: 0 5px 0 0;
+    }
 
     .customRadio{
       .fake-label{
@@ -3439,6 +3456,61 @@ h2 {
   }
 
   span { display: block;}
+}
+.wantend-button {
+  @include align(top);
+  position: relative;
+  z-index: 60;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: 55;
+  }
+
+  input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked{
+      ~ .fake-checkbox {
+        background: $orange;
+      }
+       ~ .fake-checkbox .fake-button {
+        left: 21px;
+      }
+    }
+  }
+  .fake-checkbox {
+    display: block;
+    @include squar(40px, 20px);
+    background: $gray;
+    border-radius: 20px;
+    box-shadow: 0 0 5px -2px rgba($black, 0.5) inset;
+    position: relative;
+    z-index: -1;
+  }
+  .fake-button {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    right: 0;
+    bottom: 0;
+    background: $white;
+    content: '';
+    @include squar(16px, 16px);
+    border-radius: 100%;
+    transition: left 0.5s ease;
+    -webkit-transition: left 0.5s ease;
+    -moz-transition: left 0.5s ease;
+  }
 } 
 @media print {
   * {
