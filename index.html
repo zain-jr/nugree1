@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="text/html; charset=utf-8" http-equiv=Content-Type>
 	<title>We know property better | nugree.com</title>
 	<link media="all" rel="stylesheet" href="css/main.css">
 	<link media="all" rel="stylesheet" href="css/property-agent-listing.css">
@@ -13,6 +14,7 @@
 	<link media="all" rel="stylesheet" href="css/register-now.css">
 	<link media="all" rel="stylesheet" href="css/news-detail.css">
 	<link media="all" rel="stylesheet" href="css/maps.css">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nafees-nastaleeq" type="text/css"/> 
 	<link rel="icon" type="image/png" href="images/favicon-192x192.png" sizes="192x192">
 	<link rel="icon" type="image/png" href="images/favicon-160x160.png" sizes="160x160">
 	<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
@@ -2023,10 +2025,23 @@
 						</div>
 					</div>
 				</div>-->
-				<!--<div class="addProperty-form">
+				<div class="addProperty-form">
 					<div class="main-form">
 						<h1>Add <span>Property</span></h1>
 						<form class="add-a-property">
+							<strong class="add-pro-heading"><span>Wanted Property</span></strong>
+							<ul class="radio-checks-holder fore-type">
+								<li>
+									<label for="for-wanted" class="customRadio wanted-button">
+										<input type="checkbox" id="for-wanted" checked>
+										<span class="fake-label">Wanted Property</span>
+									</label>
+								</li>
+								<li class="wanted-holder">
+									<span class="tag1"><span>require</span> <span>property</span></span>
+									<span class="urdu-tag" style="font-family: 'NafeesRegular';">ضرورت پراپرٹی</span>
+								</li>
+							</ul>
 							<strong class="add-pro-heading"><span>property for</span></strong>
 							<ul class="radio-checks-holder fore-type">
 								<li>
@@ -2039,13 +2054,6 @@
 									<label for="for-rent" class="customRadio">
 										<input type="radio" name="add-for" id="for-rent">
 										<span class="fake-label">For Rent</span>
-									</label>
-								</li>
-								<li class="wanted-holder">
-									<span class="tag-want">Wanted:</span>
-									<label for="wanted" class="wantend-button">
-										<input type="checkbox" name="add-for" id="wanted">
-										<span class="fake-checkbox"><span class="fake-button"></span></span>
 									</label>
 								</li>
 							</ul>
@@ -2101,105 +2109,95 @@
 								</li>
 							</ul>
 							<strong class="add-pro-heading"><span>Property Location</span></strong>
-							<div class="col-holder">
-								<div class="col">
-									<div class="layout">
-										<div class="layout-holder">
-											<label for="society">Socity</label>
-											<div class="input-holder">
-												<select class="js-example-basic-single" id="society">
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-												</select>
-											</div>
-										</div>
-										<div class="layout-holder">
-											<label for="block">Block</label>
-											<div class="input-holder">
-												<select class="js-example-basic-single" id="block">
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-													<option>1</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="layout">
-										<div class="layout-holder">
-											<label for="property-title">Property Title</label>
-											<div class="input-holder">
-												<input type="text" id="property-title" placeholder="Please add property title">
-											</div>
-										</div>
-									</div>
-									<div class="layout">
-										<div class="layout-holder">
-											<label for="area">Area</label>
-											<div class="input-holder">
-												<input type="text" id="area" placeholder="Area of property">
-											</div>
-										</div>
-										<div class="layout-holder">
-											<label for="unit">Unit</label>
-											<div class="input-holder">
-												<span class="fake-select">
-													<select>
-														<option>Marla</option>
-														<option>Kanal</option>
-														<option>Squar Yard</option>
-														<option>Squar Feet</option>
-													</select>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="layout">
-										<div class="layout-holder">
-											<label for="price">Price</label>
-											<div class="input-holder">
-												<input type="text" id="price" placeholder="Please enter the price">
-											</div>
-										</div>
-										<div class="layout-holder">
-											<span class="calculatedPrice text-right">Price must contain numbers only</span>
-										</div>
-									</div>
-									<div class="layout">
-										<div class="layout-holder">
-											<label for="description">Description</label>
-											<div class="input-holder">
-												<textarea placeholder="Please enter the description" id="description"></textarea>
-											</div>
-										</div>
-									</div>
-									<div class="layout">
-										<div class="layout-holder">
-											<label for="bedrooms">bedrooms</label>
-											<div class="input-holder">
-												<input type="number" id="bedrooms" placeholder="Total Bedrooms">
-											</div>
-										</div>
-										<div class="layout-holder">
-											<label for="bathroom">bathroom</label>
-											<div class="input-holder">
-												<input type="number" id="bathroom" placeholder="Total Bathroom">
-											</div>
-										</div>
-									</div>
-									<div class="layout">
-										<div class="input-holder">
-											<a class="extra-features">Extra Feature</a>
-										</div>
+							<div class="layout">
+								<div class="layout-holder">
+									<label for="society">Socity</label>
+									<div class="input-holder">
+										<select class="js-example-basic-single" id="society">
+											<option>1</option>
+											<option>1</option>
+											<option>1</option>
+											<option>1</option>
+										</select>
 									</div>
 								</div>
-								<div class="col">
-									<ul>
-										<li><a href="#"><img src="images/img04.jpg" alt="ad1"></a></li>
-										<li><a href="#"><img src="images/img04.jpg" alt="ad2"></a></li>
-									</ul>
+								<div class="layout-holder">
+									<label for="block">Block</label>
+									<div class="input-holder">
+										<select class="js-example-basic-single" id="block">
+											<option>1</option>
+											<option>1</option>
+											<option>1</option>
+											<option>1</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="layout">
+								<div class="layout-holder">
+									<label for="property-title">Property Title</label>
+									<div class="input-holder">
+										<input type="text" id="property-title" placeholder="Please add property title">
+									</div>
+								</div>
+							</div>
+							<div class="layout">
+								<div class="layout-holder">
+									<label for="area">Area</label>
+									<div class="input-holder">
+										<input type="text" id="area" placeholder="Area of property">
+									</div>
+								</div>
+								<div class="layout-holder">
+									<label for="unit">Unit</label>
+									<div class="input-holder">
+										<span class="fake-select">
+											<select>
+												<option>Marla</option>
+												<option>Kanal</option>
+												<option>Squar Yard</option>
+												<option>Squar Feet</option>
+											</select>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="layout">
+								<div class="layout-holder">
+									<label for="price">Price</label>
+									<div class="input-holder">
+										<input type="text" id="price" placeholder="Please enter the price">
+									</div>
+								</div>
+								<div class="layout-holder">
+									<span class="calculatedPrice text-right">Price must contain numbers only</span>
+								</div>
+							</div>
+							<div class="layout">
+								<div class="layout-holder">
+									<label for="description">Description</label>
+									<div class="input-holder">
+										<textarea placeholder="Please enter the description" id="description"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="layout">
+								<div class="layout-holder">
+									<label for="bedrooms">bedrooms</label>
+									<div class="input-holder">
+										<input type="number" id="bedrooms" placeholder="Total Bedrooms">
+									</div>
+								</div>
+								<div class="layout-holder">
+									<label for="bathroom">bathroom</label>
+									<div class="input-holder">
+										<input type="number" id="bathroom" placeholder="Total Bathroom">
+									</div>
+								</div>
+							</div>
+							<div class="layout">
+								<div class="input-holder">
+									<a class="extra-features">Extra Feature</a>
 								</div>
 							</div>
 							<div class="list-extraFeatures">
@@ -2370,7 +2368,7 @@
 						</div>
 						<a href="#" class="btn-default">Got it !</a>
 					</div>
-				</div>-->
+				</div>
 				<!--<div class="maps container">
 					<h1>Maps</h1>
 					<div class="layout">
