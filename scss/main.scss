@@ -408,13 +408,16 @@ h2 {
       @include align(top);
       cursor: pointer;
 
+      @include media('<desktop'){
+        padding: 23px 10px;
+      }
+
       @include media('<tablet'){
         padding: 12px 20px 13px;
       }
     }
     .searchOpener {
-      background: $mix-black;
-      color: $white;
+      color: $mix-black;
 
       @include media('<tablet'){
         display: none;
@@ -425,7 +428,10 @@ h2 {
         line-height: 0;
         @include align(middle);
       }
-      &:hover { background: $sharp-green;}
+      &:hover {
+        background: $sharp-green;
+        color: $white;
+      }
     }
   }
   .customLinks {
@@ -446,7 +452,6 @@ h2 {
 
       &:first-child {
         > a{
-          background: $dark-grey;
           max-width: 230px;
           white-space: nowrap;
           overflow: hidden;
@@ -455,14 +460,45 @@ h2 {
           @include media('<tablet'){
             max-width: 120px;
           }
-
-          &:hover {
-            background: darken($dark-grey, 5%);
-          }
         }
       }
       &:hover {
         .dropDown { display: block;}
+      }
+      &.login-reg {
+        > a {
+          background: transparent;
+          color: $mix-black;
+          padding: 28px 10px 27px;
+
+          @include media('<desktop'){
+            padding: 23px 10px;
+          }
+          @include media('<tablet'){
+            background: $mix-black;
+            color: $white;
+            padding: 16px 10px;
+          }
+
+          &:hover {
+            background: transparent;
+
+            @include media('<tablet'){
+              background: darken($mix-black, 10%);
+            }
+          }
+        }
+      }
+      &.wanted-list {
+        @include media('<tablet'){
+          display: none;
+        }
+       > a {
+         background: $mix-black;
+         &:hover {
+           background: darken($mix-black, 10%);
+         }
+       } 
       }
       a {
         color: $white;
@@ -470,8 +506,9 @@ h2 {
         display: block;
         padding:28px 50px 27px;
 
+        
         @include media('<desktop'){
-          padding: 27px 25px 28px;
+          padding: 23px 10px;
         }
         @include media('<tablet'){
           padding: 16px 22px;
@@ -563,6 +600,10 @@ h2 {
   float: left;
   @extend %layout;
 
+  @include media('<desktop'){
+    max-width: 175px;
+  }
+  
   @include media('<tablet'){
     max-width: 129px;
     margin: 4px 0 0;
@@ -956,6 +997,12 @@ h2 {
       }
 
       &:first-child{ border: 0;}
+
+      &.hidden {
+        @include media('<tablet'){
+          display: block !important;
+        }
+      }
 
       &.active {
         a{
