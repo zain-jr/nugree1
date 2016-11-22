@@ -3121,45 +3121,6 @@ h2 {
 
     li {
       padding: 0 5px;
-
-      &.wanted-holder {
-        position: absolute;
-        top: 0;
-        right:-200px;
-        @include align-reset(middle, 30,40);
-        width: 50%;
-        @extend %text-upparcase;
-        color: $mix-black;
-
-        span  {
-          padding: 0 2px;
-          font-weight: 600;
-        }
-        .tag1 {
-          padding: 10px 0 0;
-          @include align-reset(middle, 18,21);
-
-          span {
-            &:first-child {
-              color: $p42-color;
-            }
-          }
-        }
-        .urdu-tag {
-          padding: 0 10px 0;
-          
-          &:before,
-          &:after {
-            content: ')';
-            @include align(top);
-            color: $p42-color;
-            font-weight: 400;
-          }
-          &:before {
-            content: '(';
-          }
-        }
-      }
     }
 
     .tag-want {
@@ -3188,7 +3149,48 @@ h2 {
       }
     }
   }
+  &.wanted-ul {
+    max-width: inherit;
+    li {
+      @include align-reset(middle, 30,40);
+      width: 100%;
+      @extend %text-upparcase;
+      color: $mix-black;
+      @extend %text-right;
 
+      label {
+        padding: 0 0 0 30px;
+      }
+
+      span  {
+        padding: 0 2px;
+        font-weight: 600;
+      }
+      .tag1 {
+        @include align-reset(middle, 18,21);
+
+        span {
+          &:first-child {
+            color: $p42-color;
+          }
+        }
+      }
+      .urdu-tag {
+        padding: 0 10px 0;
+        
+        &:before,
+        &:after {
+          content: ')';
+          @include align(top);
+          color: $p42-color;
+          font-weight: 400;
+        }
+        &:before {
+          content: '(';
+        }
+      }
+    }
+  }
   li {
     width: 25%;
     font-weight: 600;
