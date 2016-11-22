@@ -517,19 +517,14 @@ h2 {
   top: 0;
   left: -150px;
   bottom: 0;
-  z-index: -1;
-  opacity: 0;
-  transition: z-index 0.5s ease, opacity 0.5s ease;
-  -webkit-transition: z-index 0.5s ease, opacity 0.5s ease;
-  -moz-transition: z-index 0.5s ease, opacity 0.5s ease;
+  display: none !important;
 
   @include media('<tablet'){
     border: 1px solid $sharp-green;
   }
 
   .search-id-active & {
-    z-index: 4;
-    opacity: 1;
+    display: block !important;
   }
 
   input[type="text"],input[type="number"],input[type="tel"]{
@@ -762,7 +757,7 @@ h2 {
 
     li {
       font-weight: 700;
-      width: 33.33%;
+      width: 50%;
       margin: 0 0 20px;
 
       label, span {
