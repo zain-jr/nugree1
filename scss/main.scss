@@ -1116,6 +1116,7 @@ h2 {
     bottom: 0;
     left: 0;
     right: 0;
+    background: $dark-grey;
     @extend %listreset;
     @include align-reset(top,22,24);
 
@@ -1125,7 +1126,6 @@ h2 {
     
     li {
       width: 50%;
-      background: $dark-grey;
       @extend %text-right;
       padding: 5px 20px;
 
