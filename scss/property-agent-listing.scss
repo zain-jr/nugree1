@@ -927,7 +927,7 @@ $media-expressions: (
   font-weight: 600;
 
   @include media('<desktop', '>=tablet'){
-    top: 73px;
+    top: 64px;
   }
 
   b{

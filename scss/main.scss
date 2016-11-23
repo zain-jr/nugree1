@@ -726,6 +726,10 @@ h2 {
   @extend %layout;
   padding: 72px 0 0;
 
+  @include media('<desktop'){
+    padding: 65px 0 0;
+  }
+
   @include media('<tablet'){
     padding: 42px 0 0;
   }
@@ -1501,7 +1505,7 @@ h2 {
     height: 200px;
   }
   @include media('<tablet'){
-    height: 130px;
+    display: none;
   }
 
   a, img {
@@ -3390,6 +3394,10 @@ h2 {
   display: block;
   @extend %text-center;
   margin: 0 0 20px;
+
+  @include media('<tablet'){
+    display: none;
+  }
 }
 .submit-requirement {
   position: fixed;
