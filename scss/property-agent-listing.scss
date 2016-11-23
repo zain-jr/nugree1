@@ -555,6 +555,7 @@ $media-expressions: (
       @extend %layout;
       @extend %pull-left;
       max-width: 315px;
+      background: $p42-background;
 
       @include media('<tvscreen'){
         max-width: 300px;
