@@ -575,7 +575,7 @@ $(document).on('click', '.btn-close-working', function(){
 	$('.weAreWorking').addClass('hide');
 });
 
-$(document).on('click', '.main-navigation li a', function(){
+$(document).on('click', '.main-navigation li a, .nav-blur-area', function(){
 	$('html').removeClass('nav-active');
 });
 $(document).on('click', '.searchOpener', function(){
