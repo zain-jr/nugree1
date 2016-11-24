@@ -35,8 +35,10 @@ $(document).ready(function() {
 	if($('.other-news .slide').length == 4){
 		$('.other-news').find('.btn-prev, .btn-next').remove();
 	}
+	
 	$(window).trigger('scroll');
 	imageAdjustment();
+	notifyButton();
 
 	setTimeout(function() {
 		$('.btn-alerts-nugree').trigger('click');
@@ -56,6 +58,14 @@ function imageAdjustment(){
 			$(this).addClass('portrait');
 		}
 	});
+}
+function notifyButton(){
+	if($(".publicProperty-post").length >= 1){
+		$(".match-pro-noti").addClass('hidden');
+	}
+	else {
+		$(".match-pro-noti").removeClass('hidden');
+	}
 }
 $( window ).resize(function() {
   if (screen.width > 1024){
