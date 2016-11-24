@@ -452,6 +452,15 @@ h2 {
         display: none;
       }
     }
+    
+    span[class^="icon-"],span[class*="icon-"]{
+      font-size: 25px;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      margin: -14px 0 0;
+      left: 10px;
+    }
 
     > li {
       position: relative;
@@ -475,7 +484,7 @@ h2 {
         > a {
           background: transparent;
           color: $mix-black;
-          padding: 28px 10px 27px;
+          padding: 28px 10px 27px 30px;
 
           @include media('<desktop'){
             padding: 23px 10px;
@@ -493,6 +502,9 @@ h2 {
               background: darken($mix-black, 10%);
             }
           }
+        }
+        span[class^="icon-"],span[class*="icon-"]{
+          left: 0;
         }
       }
       &.wanted-list {
@@ -2960,7 +2972,7 @@ h2 {
 
   b {
     display: block;
-    @include font(15,18);
+    @include font(15,20);
   }
 }
 .small-heading {
