@@ -657,7 +657,6 @@ h2 {
 
   li {
     padding: 0 10px;
-    margin: 0 0 10px;
 
     @include media('<desktop'){
       padding: 0 5px;
@@ -2420,13 +2419,13 @@ h2 {
         &:first-child { width: 100%;} 
       }
     }
-    .heading {
-      color: $white;
-      
-      span {
-        color: $p42-color;
-        font-weight: 600;
-      }
+  }
+  .heading {
+    color: $white;
+    
+    span {
+      color: $p42-color;
+      font-weight: 600;
     }
   }
   .bottom-footer {
