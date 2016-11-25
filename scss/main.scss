@@ -2254,6 +2254,11 @@ h2 {
 }
 .submit-query {
   @extend %layout;
+  @extend %container;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  padding: 0;
+  display: block !important;
   
   textarea,
   input[type="text"],input[type="email"],input[type="number"],input[type="password"],input[type="tel"],input[type="number"]{
@@ -2261,8 +2266,9 @@ h2 {
     display: block;
     margin: 0;
     padding: 17px 20px;
-    border: 1px solid #838383;
-    color: #838383;
+    border:1px solid $white;
+    background: transparent;
+    color: $white;
     @include font(18,21);
     transition: border-color 0.5s ease;
     -webkit-transition: border-color 0.5s ease;
@@ -2275,16 +2281,9 @@ h2 {
       padding: 8px 20px;
     }
 
-    &:focus{
-      border-color: $p42-color;
-      
-      @include placeholder {
-        color: $black;
-      }
-    }
 
     @include placeholder {
-      color: #838383;
+      color: $white;
       transition: color 0.5s ease;
       -webkit-transition: color 0.5s ease;
       -moz-transition: color 0.5s ease;
@@ -2295,18 +2294,13 @@ h2 {
   textarea {
     height: 170px;
     overflow: auto;
-    margin: 0 10px 8px;
     resize: none;
-
-    @include media('<tablet'){
-      margin: 0 0 10px;
-    }
+    margin: 0 0 10px;
   }
   .input-holder {
-    margin: 0 0 10px;
     width: 50%;
-    padding: 0 0 0 10px;
     @extend %pull-left;
+    margin: 0 0 -1px;
 
     @include media('<tablet'){
       width: 100%;
@@ -2315,15 +2309,14 @@ h2 {
   }
   button[type="submit"]{
     display: block;
-    width: 98.6%;
+    width: 100%;
     color: $white;
     @extend %text-upparcase;
     @include font(20,24);
     font-weight: 400;
-    border: 1px solid transparent;
+    border: 1px solid $white;
     padding: 20px;
-    margin: 0 0 0 10px;
-    background: $sharp-green;
+    background: transparent;
     position: relative;
 
     @include media('<tablet'){
@@ -2336,12 +2329,11 @@ h2 {
       top: 50%;
       right: 20px;
       margin: -11px 0 0;
-      color: $sharp-green;
+      color: $white;
     }
 
     &:hover {
       background: $mix-black;
-      border: 1px solid $sharp-green;
     }
   } 
 }
@@ -2422,6 +2414,8 @@ h2 {
   }
   .heading {
     color: $white;
+    display: block;
+    @include font(45,50);
     
     span {
       color: $p42-color;
