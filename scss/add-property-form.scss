@@ -73,12 +73,19 @@ $media-expressions: (
         width: 27px;
         background: $p42-color;
         border-color: $p42-color;
-      }
-      .select2-container .select2-choice .select2-arrow b::after {
+    }
+    .select2-container .select2-choice .select2-arrow b::after {
         border: 5px solid transparent;
         border-top: 5px solid $black;
         margin: -3px 0 0 -5px;
-      }
+    }
+    .select2-container-multi .select2-choices .select2-search-field input {
+        height: 40px;
+    }
+    .select2-container-multi .select2-choices {
+        min-height: 40px;
+        border: 0;
+    }
 
     .add-form-holder { @extend %layout;}
 
