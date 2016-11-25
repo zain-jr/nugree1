@@ -460,6 +460,8 @@ h2 {
       top: 50%;
       margin: -14px 0 0;
       left: 10px;
+
+      @include media('<tablet'){ display: none;}
     }
 
     > li {
@@ -2418,6 +2420,14 @@ h2 {
         &:first-child { width: 100%;} 
       }
     }
+    .heading {
+      color: $white;
+      
+      span {
+        color: $p42-color;
+        font-weight: 600;
+      }
+    }
   }
   .bottom-footer {
     @extend %layout;
@@ -2425,7 +2435,7 @@ h2 {
     @include align-reset(top, 21,26);
     color: $white;
     font-weight: 300;
-    padding: 15px;
+    padding: 0 180px 0 24px;
 
     @include media('<tablet'){
        padding: 15px 15px 60px;

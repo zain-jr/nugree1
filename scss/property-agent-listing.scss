@@ -444,6 +444,11 @@ $media-expressions: (
     li {
       display: block;
       padding: 0 0 10px;
+      
+      img {
+        @include align(top);
+        max-width: 60px;
+      }
 
       a {
         padding: 0 0 0 15px;
@@ -978,9 +983,17 @@ $media-expressions: (
   padding: 80px 20px;
 
   @include media('<tablet'){
-      @include font(13,16);
-      padding: 65px 5px;
+    @include font(13,16);
+    padding: 65px 5px;
+  }
+
+  &.email-send {
+    &:after {
+      background: url('../images/email-sent.png') no-repeat;
+      background-size: 100% 100%;
+      opacity: 0.30;  
     }
+  }
 
   &:after {
     background: url('../images/caution-sign.png') no-repeat;
@@ -997,7 +1010,7 @@ $media-expressions: (
   .no-heading {
     @extend %text-capital;
     display: block;
-    opacity: 0.5;
+    opacity: 0.65;
     font-weight: 700;
     @include font(30,33);
     padding: 0 0 10px;
@@ -1006,7 +1019,7 @@ $media-expressions: (
       @include font(20,23);
     }
   }
-  p { opacity: 0.5;}
+  p { opacity: 0.65;}
 }
 .banners {
   @extend %layout;

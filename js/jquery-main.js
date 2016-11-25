@@ -40,12 +40,14 @@ $(document).ready(function() {
 	imageAdjustment();
 	notifyButton();
 
-	setTimeout(function() {
-		$('.btn-alerts-nugree').trigger('click');
-	}, 4000);
-	setTimeout(function() {
-		$('#alerts-nugree').find('.close').trigger('click');
-	}, 12000);
+	if($(".index-page").length){
+		setTimeout(function() {
+			$('.btn-alerts-nugree').trigger('click');
+		}, 4000);
+		setTimeout(function() {
+			$('#alerts-nugree').find('.close').trigger('click');
+		}, 12000);
+	}
 });
 function imageAdjustment(){
 	$('.propertyImage-slider .slide').find('img').each(function(){

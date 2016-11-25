@@ -27,6 +27,21 @@
                 <form class="filter-form">
                     <ul class="filters-links text-upparcase">
                         <li class="active">
+                            <a class="filters-links-opener">Wanted property</a>
+                            <div class="slide">
+                                <ul class="filterChecks">
+                                    <li>
+                                        <label for="wanted-pro" class="customRadio">
+                                            <input type="radio" name="wanted-pro" id="wanted-pro" checked>
+                                            <span class="fake-checkbox"></span>
+                                            <span class="fake-label">Wanted</span>
+                                        </label>
+                                        <img src="images/z.png" alt="Zaroorat property">
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="active">
                             <a class="filters-links-opener">PROPERTY FOR</a>
                             <div class="slide">
                                 <ul class="filterChecks">
@@ -169,6 +184,10 @@
                 <strong class="no-heading">sorry, no property found</strong>
                 <p>Maybe your search was to specific, please try searching with another term.</p>
             </div>
+            <div class="propertyNotFound hidden email-send">
+                <strong class="no-heading">Thank You !</strong>
+                <p>We will send you the best match in your inbox ASAP.</p>
+            </div>
             <div class="sort-by">
                 <span class="label">Sort by:</span>
                 <span class="fake-select">
@@ -178,7 +197,7 @@
                     </select>
                 </span>
             </div>
-            <!--<article class="publicProperty-post">
+            <article class="publicProperty-post">
                 <div class="image-holder">
                     <div class="listing-image-slider">
                         <div class="mask">
@@ -217,7 +236,7 @@
                         <a class="add-to-favorite"><i class="fa fa-heart-o" aria-hidden="true"></i><i class="fa fa-heart" aria-hidden="true"></i></a>
                     </div>
                 </div>
-            </article>-->
+            </article>
             <div class="match-pro-noti text-center">
                 <a href="#found-match" class="btn-default lightbox">Notify me</a>
             </div>
@@ -277,6 +296,7 @@
                 </form>
             </div>
             <div id="found-match" class="lightbox generic-lightbox">
+                <span class="global-success">We will send you best match as soon as possible</span>
                 <span class="lighbox-heading">Notify me</span>
                 <form class="inquiry-email-form">
                     <div class="field-holder">
