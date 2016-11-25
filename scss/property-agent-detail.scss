@@ -190,7 +190,14 @@ $media-expressions: (
       @include font(27,30);
       margin: 0 0 15px;
 
-      span {font-weight: 700;}
+      a {
+        font-weight: 700;
+        color: $p42-color;
+        text-decoration:none;
+        &:hover {
+          color: $sharp-green;
+        }
+      }
 
       @include media('<tablet'){
         @include font(18,22);
