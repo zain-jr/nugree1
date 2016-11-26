@@ -720,9 +720,11 @@ $media-expressions: (
 
           @include media('<tablet'){
             left: 0;
+            top: 0;
             right: auto;
             bottom: auto;
-            background: transparent;
+            background: $white;
+            width: 40px;
           }
 
           i {
@@ -730,6 +732,10 @@ $media-expressions: (
 
             @include media('<desktop'){
               line-height: 42px;
+            }
+            @include media('<tablet'){
+              font-size: 15px;
+              line-height: 35px;
             }
           }
         }
