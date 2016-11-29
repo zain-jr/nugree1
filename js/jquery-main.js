@@ -579,8 +579,12 @@ $(document).on('click', '.main-navigation li a, .nav-blur-area', function(){
 $('#add-prop-wanted').change(function() {
 	if ($(this).is(":checked")) {
 		$('.hidden-for-wanted').addClass('hidden');
+		$('.addProperty-form').find('h1').text('Wanted');
+		$('.addProperty-form').find('h1').append(' <span>Property</span>');
 	}
 	else {
 		$('.hidden-for-wanted').removeClass('hidden');
+		$('.addProperty-form').find('h1').text('Add');
+		$('.addProperty-form').find('h1').append(' <span>Property</span>');
 	}
 });
