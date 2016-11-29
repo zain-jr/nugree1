@@ -210,7 +210,7 @@ $media-expressions: (
 }
   #aside {
     padding: 10px 10px 40px;
-    position: relative;
+    position: relative !important;
     @extend %layout;
     background: $p42-background;
     box-shadow: 0 0 20px -9px rgba($black, 0.5);
