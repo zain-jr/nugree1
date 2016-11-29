@@ -3258,7 +3258,42 @@ h2 {
     &.active {
       position: relative;
     }
+    &.wanted-holder {
+      width: auto;
+      @include align-reset(top, 14, 17);
+
+      label {
+        padding: 0 15px;
+        margin: 5px 0 0;
+      }
+
+      .fake-label {
+        padding: 0 0 0 15px;
+      }
+      .img {
+        position: relative;
+
+        &:before,
+        &:after {
+          @include align(top);
+          content: '(';
+          @include font(25, 25);
+          padding: 0 3px;
+          font-weight: 400;
+          color: $mix-black;
+        }
+        &:after {
+          content: ')';
+          color: $p42-color;
+        }
+      }
+      img {
+        max-width: 70px;
+        @include align(top);
+      }
+    }
   }
+
   &.subtype-links {
     @extend %text-left;
 

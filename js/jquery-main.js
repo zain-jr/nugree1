@@ -576,8 +576,8 @@ $(document).on('click', '.btn-close-working', function(){
 $(document).on('click', '.main-navigation li a, .nav-blur-area', function(){
 	$('html').removeClass('nav-active');
 });
-$('input:radio[name=pro-want]').change(function() {
-	if ($('#add-prop-wanted').is(":checked")) {
+$('#add-prop-wanted').change(function() {
+	if ($(this).is(":checked")) {
 		$('.hidden-for-wanted').addClass('hidden');
 	}
 	else {
