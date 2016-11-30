@@ -204,18 +204,7 @@ $media-expressions: (
   width: 20%;
   @extend .pull-left;
 
-  .banners {
-    @include media('<desktop'){ display: none;}
-  }
-}
-  #aside {
-    padding: 10px 10px 40px;
-    position: relative !important;
-    @extend %layout;
-    background: $p42-background;
-    box-shadow: 0 0 20px -9px rgba($black, 0.5);
-
-    @include media('<desktop'){
+  @include media('<desktop'){
       overflow: auto;
       width: 100%;
       display: block;
@@ -240,6 +229,26 @@ $media-expressions: (
       .filters-active & {
         bottom: 0;
       }
+    }
+
+  .banners {
+    @include media('<desktop'){ display: none;}
+  }
+}
+  #aside {
+    padding: 10px 10px 40px;
+    position: relative !important;
+    @extend %layout;
+    background: $p42-background;
+    box-shadow: 0 0 20px -9px rgba($black, 0.5);
+
+    @include media('<desktop'){
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0;
     }
 
     .top-head {
@@ -839,6 +848,10 @@ $media-expressions: (
 .agent-listing-page {
   padding: 30px 5px;
 
+  @include media('<desktop'){
+    padding: 50px 5px 20px;
+  }
+
   .image-holder {
     min-width: 200px !important;
     max-height: 200px !important;
@@ -939,6 +952,11 @@ $media-expressions: (
   position: fixed;
   margin: 0 0 10px;
   font-weight: 600;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+  }
 
   @include media('<desktop', '>=tablet'){
     top: 64px;
