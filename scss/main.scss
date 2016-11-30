@@ -461,7 +461,7 @@ h2 {
       margin: -14px 0 0;
       left: 10px;
 
-      @include media('<tablet'){ display: none;}
+      @include media('<desktop'){ display: none;}
     }
 
     > li {
