@@ -25,6 +25,7 @@ $media-expressions: (
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/helpers';
+.map-detail,
 .maps {
     position: relative;
     margin: 25px auto;
@@ -80,7 +81,7 @@ $media-expressions: (
         border: 0;
         background: transparent;
         @include squar(100%, 42px);
-        padding: 8px 15px;
+        padding: 8px 50px 8px 8px;
         @include font(16,21);
 
         @include placeholder { opacity: 1;}
@@ -162,6 +163,12 @@ $media-expressions: (
           }
         }
       }
+    }
+    .map-image-holder {
+      position: relative;
+      height: 600px;
+      max-width: 1140px;
+      margin: 10px auto 0;
     }
     .text-center {
       a{
