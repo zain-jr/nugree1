@@ -433,6 +433,9 @@ $(document).on('click', '.call-agent-btn', function(){
 	var phoneNumber = $(this).attr('data-tel');
 	var placeToGo = $('.call-agent').find('p').text(phoneNumber);
 
+	var nameOfUser = $(this).attr('data-name');
+	var placeOfName = $('.call-agent').find('.lighbox-heading').text(nameOfUser);
+
 	if (screen.width < 768){
 		$('#wrapper').removeClass('fancy-overlay');
 	}
