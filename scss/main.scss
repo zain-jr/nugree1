@@ -37,7 +37,7 @@ $media-expressions: (
 html, body {
   width: 100%;
   height: 100%;
-  background: #f4f4f4;
+  background: $white;
 }
 html {
   height: 100%;
@@ -751,7 +751,7 @@ h2 {
 }
 .page-holder {
   @extend %layout;
-  padding: 72px 0 0;
+  padding: 90px 0 0;
 
   @include media('<desktop'){
     padding: 64px 0 0;
@@ -2459,6 +2459,94 @@ h2 {
     }
   }
 }
+.popular-locations-holder {
+  @extend %layout;
+  position: relative;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  max-width: 1365px !important;
+  margin: 0 auto 15px !important;
+  padding: 0 15px 10px !important;
+
+  .location-name {
+    display: block;
+    @extend %text-left;
+    @include font(20,24);
+    padding: 0 0 15px;
+    font-weight: 500;
+
+    span {
+      color: $p42-default-grey;
+      @include font(16,20);
+      padding: 0 2px;
+
+      &:before,
+      &:after {
+        @include align(top);
+        content: ')';
+        padding: 0 1px;
+      }
+      &:before {
+        content: '(';
+      }
+    }
+  }
+  .popular-locations-heading {
+    color: $mix-black;
+    @extend %text-center;
+    @include font(25,30);
+    @include align(top);
+    font-weight: 400;
+    position: relative;
+    padding: 0 0 10px 30px;
+
+    span {
+      color: $p42-color;
+      font-weight: 600;
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $p42-color;
+      content: "\e90e";
+      font-family: 'icomoon';
+    }
+  }
+  a {
+    color: $mix-black;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .popular-locations-list {
+    @extend %listreset;
+    @include align-reset(top, 15,19);
+    @extend %text-left;
+    margin: 0 -5px;
+
+    li {
+      width: 25%;
+      padding: 0 5px 10px;
+    }
+    
+    span {
+      @include align(top);
+      padding: 0 1px;
+
+      &:before,
+      &:after {
+        @include align(top);
+        content: '(';
+        padding: 0 1px;
+      }
+      &:after {
+        content: ')';
+      }
+    }
+  }
+}
+
 .copyright{
   display: block;
   color: #838487;
