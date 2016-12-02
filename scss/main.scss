@@ -763,6 +763,7 @@ h2 {
 }
 .index-page {
   @extend %layout;
+  margin: -20px 0 0;
 }
 .mainSearch-form {
   width: 480px;

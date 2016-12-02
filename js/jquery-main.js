@@ -279,6 +279,24 @@ function initCarousel() {
 		animSpeed: 600,
 		vertical: true
 	});
+	jQuery('.form-wizard-ui').scrollGallery({
+		mask: '.mask',
+		slider: '.slideset',
+		slides: '.wizard-step',
+		currentNumber: 'span.cur-num',
+		totalNumber: 'span.all-num',
+		disableWhileAnimating: true,
+		circularRotation: true,
+		pauseOnHover: true,
+		autoRotation: false,
+		maskAutoSize: true,
+		stretchSlideToMask: true,
+		btnPrev: '.btn-prev',
+		btnNext: '.btn-next',
+		generatePagination: '.wizard-progressbar',
+		switchTime: 2000,
+		animSpeed: 600
+	});
 }
 
 // initialize fixed blocks on scroll

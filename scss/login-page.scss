@@ -29,7 +29,6 @@ $media-expressions: (
 .register-qucik-ui,
 .login-page {
     @extend %layout;
-    background: rgba($p42-background, 0.5);
     box-shadow: 0 0 7px rgba($black , 0.22);
     margin: 100px auto !important;
     max-width: 500px !important;
@@ -43,7 +42,7 @@ $media-expressions: (
     }
     .text-or {
         display: block;
-        color: $dim-grey;
+        color: $mix-black;
         font-weight: 600;
         @extend %text-center;
         margin: 20px 0;
@@ -61,7 +60,7 @@ $media-expressions: (
         }
         span {
             padding: 0 20px;
-            background: $p42-background;
+            background: $white;
             @include align(top);
             position: relative;
             z-index: 5;
@@ -120,20 +119,24 @@ $media-expressions: (
     }
     
     input[type="text"],input[type="tel"],input[type="password"],input[type="number"],input[type="email"]{
-        border: 0;
+        border: 1px solid $dim-grey;
         width: 100%;
-        padding:10px 6px;
-        @include font(13,16);
-        height: 40px;
+        padding:11px 6px;
+        @include font(18,22);
+        height: 50px;
         width: 100%;
         
         @include media('<tablet'){
             @include font(12,16);
         }
 
+        &:focus {
+            border-color: $sharp-green;
+        }
+
         @include placeholder {
             color: $dark-grey;
-            opacity: 0.7;
+            opacity: 0.5;
 
             @include media('<widescreen'){
                 @include font(11,16);
@@ -152,8 +155,8 @@ $media-expressions: (
         }
 
         .input-holder {
-            width: calc(100% - 140px);
             padding: 2px;
+            display: block;
 
             @include media('<tablet'){
                 width: 100%;
@@ -162,11 +165,11 @@ $media-expressions: (
         }
         label {
             color: $dark-grey;
-            font-weight: 700;
+            font-weight: 500;
             @extend %text-capital;
-            width: 140px;
-            @include font(14,17);
-            padding: 7px 5px 0 0;
+            display: block;
+            @include font(18,22);
+            padding: 0 2px 8px;
 
             @include media('<tablet'){
                 @include font(12,15);

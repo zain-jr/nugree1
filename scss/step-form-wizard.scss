@@ -1,0 +1,241 @@
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px,
+  'tvscreen':1540px,
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/helpers';
+.form-wizard-ui,
+.registerNow-form-wizard {
+    @extend %layout;
+    position: relative;
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+.form-wizard-ui {
+    position: relative;
+    width: 100%;
+    @extend %layout;
+
+    .mask {
+        width: 100%;
+        @extend %layout;
+        position: relative;
+    }
+    .slideset {
+        width: 99999px;
+        float: left;
+    }
+
+    .wizard-progressbar {
+        @extend %listreset;
+        @extend %layout;
+        background: $p42-background;
+
+        li {
+            width: 20%;
+            height: 7px;
+            @extend %pull-left;
+
+            &.active {
+                background: $sharp-green;
+                border-radius: 0 20px 20px 0;
+            }
+        }
+    }
+    .wizard-step {
+        @extend %layout;
+        float: left;
+        width: 100%;
+
+        .col {
+            width: 50%;
+            @extend %pull-right;
+            padding: 20px;
+
+            h3 {
+                @include font(40,44);
+                font-weight: 400;
+
+                strong {
+                    @include font(15,18);
+                    font-weight: 400;
+                    padding: 0 5px;
+                }
+                span {
+                    color: $p42-color;
+                }
+            }
+        }
+        .input-fields {
+            max-width: 600px;
+            @extend %listreset;
+            padding: 0 2px;
+
+            li {
+                padding: 0 0 8px;
+                display: block;
+            }
+            input, input[type="text"],input[type="tel"],input[type="password"],input[type="number"],input[type="email"]{
+                border: 1px solid $dim-grey;
+                width: 100%;
+                padding:11px 6px;
+                @include font(18,22);
+                height: 50px;
+                width: 100%;
+                
+                @include media('<tablet'){
+                    @include font(12,16);
+                }
+
+                &:focus {
+                    border-color: $sharp-green;
+                }
+
+                @include placeholder {
+                    color: $dark-grey;
+                    opacity: 0.5;
+
+                    @include media('<widescreen'){
+                        @include font(11,16);
+                    }
+                }
+            }
+            label {
+                color: $dark-grey;
+                font-weight: 500;
+                @extend %text-capital;
+                display: block;
+                @include font(18,22);
+                padding: 0 0 8px;
+
+                @include media('<tablet'){
+                    @include font(12,15);
+                    width: 100%;
+                    display: block;
+                    padding: 0 0 5px;
+                }
+                &.required-field{
+                    &:after {
+                        @include align(top);
+                        color: $red;
+                        content: '*';
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+        .toolTip {
+            border: 1px solid $sharp-green;
+            border-radius: 2px;
+            color: $darken-grey;
+            @extend %text-center;
+            max-width: 430px;
+            padding: 10px 70px 10px;
+            position: relative;
+            margin: 80px 0 30px;
+
+            &:after {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                content: "\e910";
+                font-family: 'icomoon';
+                color: $sharp-green;
+                font-size: 40px;
+                line-height: 1;
+            }
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: -21px;
+                margin: -5px 0 0;
+                border: 10px solid transparent;
+                border-right: 10px solid $sharp-green;
+                content: '';
+            }
+
+            h1 {
+                @include font(18,21);
+                font-weight: 600;
+                color: $mix-black;
+                margin: 0 0 5px;
+                padding: 0;
+            }
+            h2 {
+                @include font(16,20);
+                font-weight: 400;
+                color: $p42-default-grey;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .wizard-image {
+            max-width: 580px;
+            margin: 0 0 0 auto;
+
+            img {
+                @extend %img-res;
+            }
+        }
+        .wizard-btn-holder {
+            @extend %listreset;
+            @extend %text-center;
+            max-width: 600px;
+            @extend %layout;
+            margin: 5px 0 0;
+
+            li {
+                float: left;
+                width: 50%;
+            }
+            button {
+                display: block;
+                width: 100%;
+                background: transparent;
+                border: 0;
+                padding: 10px;
+                transition: color 0.6s ease, background 0.6s ease;
+                -webkit-transition: color 0.6s ease, background 0.6s ease;
+                -moz-transition: color 0.6s ease, background 0.6s ease;
+
+                span, i {
+                    @include align(middle);
+                    padding: 0 5px;
+                }
+                &.wizard-action-btn-next {
+                    border: 1px solid $sharp-green;
+                    color: $sharp-green;
+                    
+                    &:hover {
+                        background: $sharp-green;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
