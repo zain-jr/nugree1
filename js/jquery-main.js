@@ -1,9 +1,11 @@
 $(document).ready(function() {
-	
-	// $('#custom-scroll-bar').optiscroll();
+	if($("#custom-scroll-bar").length){
+		$('#custom-scroll-bar').optiscroll();
+	}
 
-	if($(".js-example-basic-single").length)
-		$(".js-example-basic-single").select2();	
+	if($(".js-example-basic-single").length){
+		$(".js-example-basic-single").select2();
+	}	
 	
 	if($(".form-wizard-ui").length){
 		var mainFormHeight = $(".form-wizard-ui").height();

@@ -113,7 +113,6 @@ html {
   font-size: 13px !important;
   line-height: 22px !important;
   z-index: 5;
-  padding: 0 20px 0 30px;
   text-align: left !important;
 
   @include media('<tablet'){
@@ -162,7 +161,7 @@ html {
     }
   }
   .fake-label {
-    padding: 0 0 0 30px;
+    padding: 0 0 0 40px;
     color: $dark-grey;
     @include align(top);
     pointer-events: none;
@@ -391,7 +390,7 @@ h2 {
   z-index: 99122;
   width: 100%;
   background: $white;
-  padding: 0 0 0 110px;
+  padding: 0 0 0 80px;
   box-shadow: 0 0 4px rgba($black,0.5);
   min-width: 320px;
 
@@ -424,6 +423,10 @@ h2 {
     .searchOpener {
       color: $mix-black;
       padding: 28px 0 27px;
+
+      @include media('<desktop'){
+        padding: 23px 0;
+      }
 
       @include media('<tablet'){
         display: none;

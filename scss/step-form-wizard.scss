@@ -57,6 +57,9 @@ $media-expressions: (
             label {
              span[class^="icon-"],span[class*="icon-"]{ @extend %hidden;}   
             }
+            .label-text {
+                display: none;
+            }
         }
 
         .name-tag {
@@ -75,16 +78,17 @@ $media-expressions: (
         }
 
         input[type="file"]{
-            position: fixed;
-            top: -999px;
-            left: -999px;
+            position: absolute;
+            top: 0;
+            left: 0;
             opacity: 0;
             visibility: hidden;
         }
         .logo-holder {
+            border: 1px solid rgba($dark-grey, 0.5);
             position: relative;
             @extend %layout;
-            @include squar(90px,90px);
+            @include squar(211px,147px);
             margin: 0 auto;
 
             @include media('<tablet'){
@@ -95,12 +99,13 @@ $media-expressions: (
             }
 
             label {
-                @include squar(90px,90px);
-                background: $dark-grey;
+                @include squar(211px,147px);
+                background: $p42-background;
                 display: block;
-                padding: 0;
+                padding: 25px !important;
                 position: relative;
                 cursor: pointer;
+                @extend %text-center;
 
                 span[class^="icon-"],span[class*="icon-"]{
                     position: absolute;
@@ -113,6 +118,16 @@ $media-expressions: (
                 }
 
                 &:after { display: none;}
+                .label-text {
+                    &:before {
+                        content: "\e912";
+                        font-family: 'icomoon';
+                        display: block;
+                        font-size: 60px;
+                        line-height: 1;
+                        margin: 0 0 10px;
+                    }
+                }
             }
             .picture-holder {
                 position: absolute;
@@ -120,7 +135,18 @@ $media-expressions: (
                 right: 0;
                 left: 0;
                 bottom: 0;
+                height: 100%;
+                white-space: nowrap;
                 display: none;
+                text-align: center;
+
+                &:before {
+                    height: 100%;
+                    width: 1px;
+                    content: '';
+                    margin: 0 0 0 -5px;
+                    @include align(middle);
+                }
 
                 &:after {
                     position: absolute;
@@ -134,12 +160,12 @@ $media-expressions: (
                 }
                 &:hover {
                     .company-logo-delete,
-                    &:after { display: block;} 
+                    &:after { display: block;}
                 }
 
                 img {
-                    @extend %img-res;
-                    height: 100%;
+                    @include align(middle);
+                    white-space: normal;
                 }
                 .company-logo-delete {
                     position: absolute;
@@ -310,6 +336,7 @@ $media-expressions: (
                 padding: 0 0 8px;
                 display: block;
             }
+            textarea,
             input, input[type="text"],input[type="tel"],input[type="password"],input[type="number"],input[type="email"]{
                 border: 1px solid $dim-grey;
                 width: 100%;
@@ -335,6 +362,10 @@ $media-expressions: (
                         @include font(11,16);
                     }
                 }
+            }
+            textarea {
+                resize: none;
+                height: 200px;
             }
             label {
                 color: $dark-grey;
@@ -362,6 +393,8 @@ $media-expressions: (
                         color: $red;
                         content: '*';
                         opacity: 0.7;
+                        font-size: 35px;
+                        line-height: 1;
                     }
                 }
             }

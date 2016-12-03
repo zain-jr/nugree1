@@ -31,7 +31,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://use.fontawesome.com/fbabf169f3.js"></script>
 </head>
-<body id="custom-scroll-bar" class="optiscroll">
+<body>
 	<div id="wrapper">
 		<header id="header">
 			<a class="nav-opener navigation-toggler"><span></span></a>
@@ -3233,7 +3233,7 @@
 									<li><button type="submit" class="wizard-action-btn-next">Continue<span class="icon-arrow-right"></span></button></li>
 								</ul>
 							</form>
-							<form class="wizard-step">
+							<form class="wizard-step current-active-slide">
 								<div class="col">
 									<div class="toolTip">
 										<h1>Lorem Ipsum</h1>
@@ -3391,13 +3391,13 @@
 									<li><button type="submit" class="wizard-action-btn-next">Continue<span class="icon-arrow-right"></span></button></li>
 								</ul>
 							</form>
-							<form class="wizard-step current-active-slide">
+							<form class="wizard-step">
 								<div class="col">
 									<div class="toolTip">
 										<h1>Lorem Ipsum</h1>
 										<h2>Your exact address will only be shared with confirmed guests.</h2>
 									</div>
-									<div class="wizard-image"><img src="images/img20.png" alt="Image Description"></div>
+									<div class="wizard-image"><img src="images/img22.png" alt="Image Description"></div>
 								</div>
 								<div class="col input-content-holder">
 									<h3><strong>Step 3:</strong><span>If you are an</span> Agent.</h3>
@@ -3406,7 +3406,7 @@
 											<div class="company-logo">
 												<input type="file" id="c-logo" name="companyLogo" onchange="companyLogoUploader(this , '.company-profileP')">
 												<div class="logo-holder">
-													<label for="c-logo"></label>
+													<label for="c-logo"><span class="label-text">Upload an image.</span></label>
 													<div class="picture-holder">
 														<img src="" class="company-profileP" alt="Company logo">
 														<a class="company-logo-delete"><span class="icon-bin-delete"></span></a>
@@ -3415,21 +3415,15 @@
 											</div>
 										</li>
 										<li>
-											<label for="reg-email" class="required-field">Email</label>
+											<label for="reg-agency-name" class="required-field">Agency Name </label>
 											<div class="input-holder">
-												<input type="email" id="reg-email" placeholder="Please enter your email*" required>
+												<input type="email" id="reg-agency-name" placeholder="Please enter agency name *" required>
 											</div>
 										</li>
 										<li>
-											<label for="reg-phone" class="required-field">Phone</label>
+											<label for="reg-description" class="required-field">Password</label>
 											<div class="input-holder">
-												<input type="tel" id="reg-phone" placeholder="Please enter your phone or mobile number*" required>
-											</div>
-										</li>
-										<li>
-											<label for="reg-password" class="required-field">Password</label>
-											<div class="input-holder">
-												<input type="password" id="reg-password" placeholder="Please your password*" required>
+												<textarea id="reg-description" placeholder="Please enter the description"></textarea>
 											</div>
 										</li>
 									</ul>
