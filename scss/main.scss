@@ -131,7 +131,6 @@ html {
     &:checked ~ {
       .fake-checkbox,
       .fake-radio {
-        background: $p42-color;
         &:after { opacity: 1;}
       }
     }
@@ -140,7 +139,7 @@ html {
   .fake-checkbox,
   .fake-radio {
     @include squar(22px, 22px);
-    border: 3px solid $p42-color;
+    border: 1px solid $sharp-green;
     position: relative;
     color: $dark-grey;
     pointer-events: none;
@@ -153,17 +152,17 @@ html {
       position: absolute;
       top: 50%;
       left: 50%;
-      content: "\e94a";
-      margin: -14px 0 0 -13px;
+      content: "\e911";
+      margin: -16px 0 0 -7px;
       font-family: 'icomoon';
-      color: $white;
+      color: $sharp-green;
       font-size: 25px;
       line-height: 1;
       opacity: 0;
     }
   }
   .fake-label {
-    padding: 0 0 0 10px;
+    padding: 0 0 0 30px;
     color: $dark-grey;
     @include align(top);
     pointer-events: none;
@@ -391,9 +390,9 @@ h2 {
   right: 0;
   z-index: 99122;
   width: 100%;
-  background: $p42-background;
+  background: $white;
   padding: 0 0 0 110px;
-  box-shadow: 0 0 15px rgba($black,0.5);
+  box-shadow: 0 0 4px rgba($black,0.5);
   min-width: 320px;
 
   @include media('<tablet'){
@@ -424,6 +423,7 @@ h2 {
     }
     .searchOpener {
       color: $mix-black;
+      padding: 28px 0 27px;
 
       @include media('<tablet'){
         display: none;
@@ -435,8 +435,7 @@ h2 {
         @include align(middle);
       }
       &:hover {
-        background: $sharp-green;
-        color: $white;
+        color: $black;
       }
     }
   }
@@ -486,15 +485,10 @@ h2 {
         > a {
           background: transparent;
           color: $mix-black;
-          padding: 28px 10px 27px 30px;
 
-          @include media('<desktop'){
-            padding: 23px 10px;
-          }
           @include media('<tablet'){
             background: $mix-black;
             color: $white;
-            padding: 16px 10px;
           }
 
           &:hover {
@@ -2580,9 +2574,8 @@ h2 {
   }
 }
 .nav-opener {
-  width: 92px;
+  width: 70px;
   color: $sharp-green;
-  background: $mix-black;
   @include align(top);
   position: relative;
   cursor: pointer;
@@ -2595,19 +2588,14 @@ h2 {
     width: 50px;
   }
 
-  &:hover {
-    background: $orange;
-    color: $white;
-  }
-
   span,
   &:after, &:before {
     position: absolute;
     top: 20%;
     right: 35%;
-    left: 35%;
-    height: 2px;
-    background: $white;
+    left: 0;
+    height: 3px;
+    background: $black;
     content: '';
     transition: right 0.5s ease;
     -webkit-transition: right 0.5s ease;
@@ -2620,35 +2608,20 @@ h2 {
   }
   &:before{
     top: auto;
-    bottom: 42%;
+    bottom: 22%;
 
     @include media('<tablet'){
       bottom: 20%;
     }
   }
   span {
-    top: 45%;
+    top: 55%;
     margin: -5px 0 0;
-    right: 40%;
 
     @include media('<tablet'){
       right: 20%;
       top: 55%;
       margin: -4px 0 0;
-    }
-  }
-  strong {
-    font-weight: 600;
-    @extend %text-capital;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    @extend %text-center;
-    @include font(14,18);
-
-    @include media('<tablet'){
-      display: none;
     }
   }
 }
@@ -3655,6 +3628,29 @@ h2 {
 }
 .match-pro-noti {
   padding: 20px 0 0;
+}
+.breadcrumbs {
+  @extend %listreset;
+  @include align-reset(top, 18,21);
+
+  li {
+    margin: 0 0 10px;
+    &:first-child{
+      &:before { display: none;}
+    }
+    &:before {
+      padding: 0 5px;
+      @include align(top);
+      content: '/';
+      color: $light-blue;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 @media print {
   * {

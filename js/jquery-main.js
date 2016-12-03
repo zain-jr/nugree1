@@ -1,24 +1,41 @@
 $(document).ready(function() {
+	
 	// $('#custom-scroll-bar').optiscroll();
 
 	if($(".js-example-basic-single").length)
 		$(".js-example-basic-single").select2();	
+	
+	if($(".form-wizard-ui").length){
+		var mainFormHeight = $(".form-wizard-ui").height();
+		var aboluteHeight = $(".current-active-slide").find(".input-content-holder").height();
+
+		if(aboluteHeight > mainFormHeight){
+			$(".form-wizard-ui").css(
+				'min-height', aboluteHeight+70
+			)
+		}
+	}
+
 	if (screen.width < 768){
 		$('.call-agent-btn').each(function(){
 			var mobileNumber = $(this).attr('data-tel');
 			$(this).attr('href', 'tel:'+mobileNumber)
 		});
 	}
+	
 	if($('.publicProperty-post, .publicAgent-post').length == 0){
 		$('.propertyNotFound').removeClass('hidden');
 		$('.pager, .sort-by').remove();
 	}
+
 	$('.addPro-type:first').trigger('change');
+
 	if($('.propertyImage-slider ').find('.slide').length == 1){
 		$('.propertyImage-pagination, .propertyImage-slider-btn-prev, .propertyImage-slider-btn-next').remove();
 		$('.propertyImage-slider ').find('.slide a').removeClass('lightbox');
 		$('.propertyImage-slider ').find('.slide a').removeAttr('rel href'); 
 	}
+
 	if($('.agent-listing-page, .listing-page').hasClass("sticky-sidBar")){
 		$(document).on('click', '.top-head', function(){
 			$(this).toggleClass('active');
@@ -26,17 +43,21 @@ $(document).ready(function() {
 			$('.filters-links').find('.fromTo').removeClass('full-width');
 		})
 	}
+
 	$('.ads-slideshow').find('.slide').each(function(){
 		if($(this).find('a').length == 1){
 			$(this).closest('.slide').addClass('one-banner');
 		}
 	});
+
 	if($('.detail-news-slider .slide').length == 1){
 		$('.detail-news-slider').find('.btn-prev, .btn-next').remove();
 	}
+
 	if($('.other-news .slide').length == 4){
 		$('.other-news').find('.btn-prev, .btn-next').remove();
 	}
+
 	if($(".index-page").length){
 		setTimeout(function() {
 			$('.btn-alerts-nugree').trigger('click');
@@ -45,6 +66,9 @@ $(document).ready(function() {
 			$('#alerts-nugree').find('.close').trigger('click');
 		}, 12000);
 	}
+
+
+
 	$(window).trigger('scroll');
 	imageAdjustment();
 	notifyButton();
@@ -278,24 +302,6 @@ function initCarousel() {
 		switchTime: 2000,
 		animSpeed: 600,
 		vertical: true
-	});
-	jQuery('.form-wizard-ui').scrollGallery({
-		mask: '.mask',
-		slider: '.slideset',
-		slides: '.wizard-step',
-		currentNumber: 'span.cur-num',
-		totalNumber: 'span.all-num',
-		disableWhileAnimating: true,
-		circularRotation: true,
-		pauseOnHover: true,
-		autoRotation: false,
-		maskAutoSize: true,
-		stretchSlideToMask: true,
-		btnPrev: '.btn-prev',
-		btnNext: '.btn-next',
-		generatePagination: '.wizard-progressbar',
-		switchTime: 2000,
-		animSpeed: 600
 	});
 }
 

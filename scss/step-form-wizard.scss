@@ -36,40 +36,245 @@ $media-expressions: (
     }
 }
 .form-wizard-ui {
+    padding: 0 0 70px;
     position: relative;
     width: 100%;
     @extend %layout;
 
-    .mask {
-        width: 100%;
-        @extend %layout;
+    .company-logo {
         position: relative;
-    }
-    .slideset {
-        width: 99999px;
-        float: left;
+        @extend %layout;
+        display: block;
+        width: 100%;
+
+        @include media('<tablet'){
+            margin: 0 auto;
+            display: block !important;
+            max-width: 250px;
+        }
+
+        &.hover {
+            label {
+             span[class^="icon-"],span[class*="icon-"]{ @extend %hidden;}   
+            }
+        }
+
+        .name-tag {
+            float: left;
+            @include font(16,19);
+            color: $dark-grey;
+            padding: 35px 0 0;
+
+            @include media('<tablet'){
+                float: none;
+                display: block;
+                @include font(12,15);
+                text-align: center;
+                padding: 0 0 10px;
+            }
+        }
+
+        input[type="file"]{
+            position: fixed;
+            top: -999px;
+            left: -999px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .logo-holder {
+            position: relative;
+            @extend %layout;
+            @include squar(90px,90px);
+            margin: 0 auto;
+
+            @include media('<tablet'){
+                float: none;
+                display: block;
+                padding: 0 0 10px;
+                margin: 0 auto;
+            }
+
+            label {
+                @include squar(90px,90px);
+                background: $dark-grey;
+                display: block;
+                padding: 0;
+                position: relative;
+                cursor: pointer;
+
+                span[class^="icon-"],span[class*="icon-"]{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    color: $p42-background;
+                    font-size: 25px;
+                    line-height: 1;
+                    margin: -12px 0 0 -12px;
+                }
+
+                &:after { display: none;}
+            }
+            .picture-holder {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                display: none;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba($white, 0.7);
+                    content: '';
+                    display: none;
+                }
+                &:hover {
+                    .company-logo-delete,
+                    &:after { display: block;} 
+                }
+
+                img {
+                    @extend %img-res;
+                    height: 100%;
+                }
+                .company-logo-delete {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 11;
+                    color: $red;
+                    font-size: 30px;
+                    line-height: 1;
+                    margin: -15px 0 0 -15px;
+                    display: none;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
     .wizard-progressbar {
         @extend %listreset;
         @extend %layout;
         background: $p42-background;
+        position: fixed;
+        top: 73px;
+        left: 0;
+        right: 0;
+        z-index: 999;
 
         li {
             width: 20%;
-            height: 7px;
+            height: 10px;
             @extend %pull-left;
+            position: relative;
 
             &.active {
                 background: $sharp-green;
                 border-radius: 0 20px 20px 0;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: -99999px;
+                    bottom: 0;
+                    right: 100%;
+                    background: $sharp-green;
+                    content: '';
+                }
+            }
+        }
+    }
+    .wizard-btn-holder {
+        @extend %listreset;
+        @extend %text-center;
+        max-width: 512px;
+        @extend %layout;
+        margin: 5px -5px 0;
+        position: absolute;
+        left: 23px;
+        right:0;
+        bottom: 0;
+        z-index: 99;
+
+        li {
+            padding: 0 5px;
+            float: left;
+            width: 50%;
+        }
+        a,
+        button {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            background: transparent;
+            border: 0;
+            padding: 10px;
+            transition: color 0.6s ease, background 0.6s ease;
+            -webkit-transition: color 0.6s ease, background 0.6s ease;
+            -moz-transition: color 0.6s ease, background 0.6s ease;
+
+            span, i {
+                @include align(middle);
+                padding: 0 5px;
+            }
+            &.wizard-action-btn-login {
+                border: 1px solid $p42-color;
+                color: $p42-color;
+
+                &:hover {
+                    color: $white;
+                    background: $p42-color;
+                }
+            }
+            &.wizard-action-btn-prev {
+                color: $p42-color;
+                padding: 3px 0 0;
+
+                span, i {
+                    border: 1px solid $p42-color;
+                    border-radius: 100%;
+                    padding: 0;
+                    font-size: 35px;
+                    line-height: 1;
+                    margin: 0 10px;
+                }
+            }
+            &.wizard-action-btn-next {
+                border: 1px solid $sharp-green;
+                color: $sharp-green;
+                
+                &:hover {
+                    background: $sharp-green;
+                    color: $white;
+                }
             }
         }
     }
     .wizard-step {
         @extend %layout;
-        float: left;
-        width: 100%;
+        margin: 0 -20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s ease;
+        -webkit-transition: all 0.6s ease;
+        -moz-transition: all 0.6s ease;
+
+        &.current-active-slide {
+            z-index: 99;
+            opacity: 1;
+            visibility: visible;
+        }
 
         .col {
             width: 50%;
@@ -81,12 +286,13 @@ $media-expressions: (
                 font-weight: 400;
 
                 strong {
-                    @include font(15,18);
                     font-weight: 400;
-                    padding: 0 5px;
+                    padding: 0 20px 0 0;
+                    color: $dark-grey;
                 }
                 span {
                     color: $p42-color;
+                    font-weight: 600;
                 }
             }
         }
@@ -94,6 +300,11 @@ $media-expressions: (
             max-width: 600px;
             @extend %listreset;
             padding: 0 2px;
+
+            &.scroll-able {
+                max-height: 400px;
+                overflow-y: auto;
+            }
 
             li {
                 padding: 0 0 8px;
@@ -106,6 +317,7 @@ $media-expressions: (
                 @include font(18,22);
                 height: 50px;
                 width: 100%;
+                box-shadow: none !important;
                 
                 @include media('<tablet'){
                     @include font(12,16);
@@ -138,6 +350,12 @@ $media-expressions: (
                     display: block;
                     padding: 0 0 5px;
                 }
+                &.customRadio,
+                &.customCheckbox {
+                    font-size: 22px !important;
+                    line-height: 26px !important;
+                }
+
                 &.required-field{
                     &:after {
                         @include align(top);
@@ -148,6 +366,7 @@ $media-expressions: (
                 }
             }
         }
+        
         .toolTip {
             border: 1px solid $sharp-green;
             border-radius: 2px;
@@ -199,42 +418,6 @@ $media-expressions: (
 
             img {
                 @extend %img-res;
-            }
-        }
-        .wizard-btn-holder {
-            @extend %listreset;
-            @extend %text-center;
-            max-width: 600px;
-            @extend %layout;
-            margin: 5px 0 0;
-
-            li {
-                float: left;
-                width: 50%;
-            }
-            button {
-                display: block;
-                width: 100%;
-                background: transparent;
-                border: 0;
-                padding: 10px;
-                transition: color 0.6s ease, background 0.6s ease;
-                -webkit-transition: color 0.6s ease, background 0.6s ease;
-                -moz-transition: color 0.6s ease, background 0.6s ease;
-
-                span, i {
-                    @include align(middle);
-                    padding: 0 5px;
-                }
-                &.wizard-action-btn-next {
-                    border: 1px solid $sharp-green;
-                    color: $sharp-green;
-                    
-                    &:hover {
-                        background: $sharp-green;
-                        color: $white;
-                    }
-                }
             }
         }
     }

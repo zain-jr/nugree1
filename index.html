@@ -27,14 +27,14 @@
 	<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
 	<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,600,700" rel="stylesheet">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://use.fontawesome.com/fbabf169f3.js"></script>
 </head>
 <body id="custom-scroll-bar" class="optiscroll">
 	<div id="wrapper">
 		<header id="header">
-			<a class="nav-opener navigation-toggler"><span></span><strong>Menu</strong></a>
+			<a class="nav-opener navigation-toggler"><span></span></a>
 			<div class="logo"><a href="#"><img src="images/logo.png" alt="nugree.com"></a></div>
 			<div class="right-area">
 				<a class="searchOpener"><span class="icon-search"></span></a>
@@ -44,7 +44,7 @@
 				</form>
 				<ul class="customLinks">
 					<li class="login-reg">
-						<a href="#"><span class="icon-user"></span> Login / Register</span></a>
+						<a href="#">Login / Register</span></a>
 						<ul class="dropDown">
 							<li><a href="#">my profile</a></li>
 							<li><a href="#">my listing</a></li>
@@ -2289,6 +2289,13 @@
 					</div>
 				</div>-->
 				<!--<div class="propertyDetail-page">
+					<ul class="breadcrumbs container">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">properties</a></li>
+						<li><a href="#">view</a></li>
+						<li><a href="#">Detail</a></li>
+						<li>current page</li>
+					</ul>
 					<div class="container">
 						<div class="detail-holder">
 							<div class="frame">
@@ -3176,264 +3183,269 @@
 				<div class="registerNow-form-wizard">
 					<div class="container">
 						<div class="form-wizard-ui">
-							<div class="mask">
-								<ul class="wizard-progressbar">
-									<li class="active"></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-								</ul>
-								<div class="slideset">
-									<form class="wizard-step">
-										<div class="col">
-											<div class="toolTip">
-												<h1>Lorem Ipsum</h1>
-												<h2>Your exact address will only be shared with confirmed guests.</h2>
-											</div>
-											<div class="wizard-image"><img src="images/img20.png" alt="Image Description"></div>
-										</div>
-										<div class="col">
-											<h3><strong>Step 1:</strong><span>Basic</span> Info.</h3>
-											<ul class="input-fields">
-												<li>
-													<label for="reg-name" class="required-field">Name</label>
-													<div class="input-holder">
-														<input type="text" id="reg-name" placeholder="Name *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-email" class="required-field">Email</label>
-													<div class="input-holder">
-														<input type="email" id="reg-email" placeholder="Email *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-phone" class="required-field">Phone</label>
-													<div class="input-holder">
-														<input type="tel" id="reg-phone" placeholder="Phone *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-password" class="required-field">Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-password" placeholder="Password *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-Repassword" class="required-field">Re-type Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-Repassword" placeholder="Re-type Password *" required>
-													</div>
-												</li>
-											</ul>
-											<ul class="wizard-btn-holder">
-												<li><button type="submit" class="wizard-action-btn-next">Next<span class="icon-arrow-right"></span></button></li>
-												<li></li>
-											</ul>
-										</div>
-									</form>
-									<form class="wizard-step">
-										<div class="col">
-											<div class="toolTip">
-												<h1>Lorem Ipsum</h1>
-												<h2>Your exact address will only be shared with confirmed guests.</h2>
-											</div>
-											<div class="wizard-image"><img src="images/img20.png" alt="Image Description"></div>
-										</div>
-										<div class="col">
-											<h3><strong>Step 1:</strong><span>Basic</span> Info.</h3>
-											<ul class="input-fields">
-												<li>
-													<label for="reg-name" class="required-field">Name</label>
-													<div class="input-holder">
-														<input type="text" id="reg-name" placeholder="Name *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-email" class="required-field">Email</label>
-													<div class="input-holder">
-														<input type="email" id="reg-email" placeholder="Email *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-phone" class="required-field">Phone</label>
-													<div class="input-holder">
-														<input type="tel" id="reg-phone" placeholder="Phone *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-password" class="required-field">Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-password" placeholder="Password *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-Repassword" class="required-field">Re-type Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-Repassword" placeholder="Re-type Password *" required>
-													</div>
-												</li>
-											</ul>
-											<ul class="wizard-btn-holder">
-												<li><button type="button" class="wizard-action-btn-next btn-next">Next 2<span class="icon-arrow-right"></span></button></li>
-												<li></li>
-											</ul>
-										</div>
-									</form>
-									<form class="wizard-step">
-										<div class="col">
-											<div class="toolTip">
-												<h1>Lorem Ipsum</h1>
-												<h2>Your exact address will only be shared with confirmed guests.</h2>
-											</div>
-											<div class="wizard-image"><img src="images/img20.png" alt="Image Description"></div>
-										</div>
-										<div class="col">
-											<h3><strong>Step 1:</strong><span>Basic</span> Info.</h3>
-											<ul class="input-fields">
-												<li>
-													<label for="reg-name" class="required-field">Name</label>
-													<div class="input-holder">
-														<input type="text" id="reg-name" placeholder="Name *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-email" class="required-field">Email</label>
-													<div class="input-holder">
-														<input type="email" id="reg-email" placeholder="Email *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-phone" class="required-field">Phone</label>
-													<div class="input-holder">
-														<input type="tel" id="reg-phone" placeholder="Phone *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-password" class="required-field">Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-password" placeholder="Password *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-Repassword" class="required-field">Re-type Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-Repassword" placeholder="Re-type Password *" required>
-													</div>
-												</li>
-											</ul>
-											<ul class="wizard-btn-holder">
-												<li><button type="button" class="wizard-action-btn-next btn-next">Next 3<span class="icon-arrow-right"></span></button></li>
-												<li></li>
-											</ul>
-										</div>
-									</form>
-									<form class="wizard-step">
-										<div class="col">
-											<div class="toolTip">
-												<h1>Lorem Ipsum</h1>
-												<h2>Your exact address will only be shared with confirmed guests.</h2>
-											</div>
-											<div class="wizard-image"><img src="images/img20.png" alt="Image Description"></div>
-										</div>
-										<div class="col">
-											<h3><strong>Step 1:</strong><span>Basic</span> Info.</h3>
-											<ul class="input-fields">
-												<li>
-													<label for="reg-name" class="required-field">Name</label>
-													<div class="input-holder">
-														<input type="text" id="reg-name" placeholder="Name *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-email" class="required-field">Email</label>
-													<div class="input-holder">
-														<input type="email" id="reg-email" placeholder="Email *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-phone" class="required-field">Phone</label>
-													<div class="input-holder">
-														<input type="tel" id="reg-phone" placeholder="Phone *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-password" class="required-field">Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-password" placeholder="Password *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-Repassword" class="required-field">Re-type Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-Repassword" placeholder="Re-type Password *" required>
-													</div>
-												</li>
-											</ul>
-											<ul class="wizard-btn-holder">
-												<li><button type="button" class="wizard-action-btn-next btn-next">Next 4<span class="icon-arrow-right"></span></button></li>
-												<li></li>
-											</ul>
-										</div>
-									</form>
-									<form class="wizard-step">
-										<div class="col">
-											<div class="toolTip">
-												<h1>Lorem Ipsum</h1>
-												<h2>Your exact address will only be shared with confirmed guests.</h2>
-											</div>
-											<div class="wizard-image"><img src="images/img20.png" alt="Image Description"></div>
-										</div>
-										<div class="col">
-											<h3><strong>Step 1:</strong><span>Basic</span> Info.</h3>
-											<ul class="input-fields">
-												<li>
-													<label for="reg-name" class="required-field">Name</label>
-													<div class="input-holder">
-														<input type="text" id="reg-name" placeholder="Name *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-email" class="required-field">Email</label>
-													<div class="input-holder">
-														<input type="email" id="reg-email" placeholder="Email *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-phone" class="required-field">Phone</label>
-													<div class="input-holder">
-														<input type="tel" id="reg-phone" placeholder="Phone *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-password" class="required-field">Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-password" placeholder="Password *" required>
-													</div>
-												</li>
-												<li>
-													<label for="reg-Repassword" class="required-field">Re-type Password</label>
-													<div class="input-holder">
-														<input type="password" id="reg-Repassword" placeholder="Re-type Password *" required>
-													</div>
-												</li>
-											</ul>
-											<ul class="wizard-btn-holder">
-												<li><button type="submit" class="wizard-action-btn-next">finish<span class="icon-arrow-right"></span></button></li>
-												<li></li>
-											</ul>
-										</div>
-									</form>
+							<ul class="wizard-progressbar">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li class="active"></li>
+								<li></li>
+							</ul>
+							<form class="wizard-step">
+								<div class="col">
+									<div class="toolTip">
+										<h1>Lorem Ipsum</h1>
+										<h2>Your exact address will only be shared with confirmed guests.</h2>
+									</div>
+									<div class="wizard-image"><img src="images/img20.png" alt="Image Description"></div>
 								</div>
-							</div>
+								<div class="col input-content-holder">
+									<h3><strong>Step 1:</strong><span>Basic</span> Info.</h3>
+									<ul class="input-fields">
+										<li>
+											<label for="reg-name" class="required-field">Name</label>
+											<div class="input-holder error">
+												<input type="text" id="reg-name" placeholder="Please enter your name*" required>
+												<span class="error-text">This is error</span>
+											</div>
+										</li>
+										<li>
+											<label for="reg-email" class="required-field">Email</label>
+											<div class="input-holder">
+												<input type="email" id="reg-email" placeholder="Please enter your email*" required>
+											</div>
+										</li>
+										<li>
+											<label for="reg-phone" class="required-field">Phone</label>
+											<div class="input-holder">
+												<input type="tel" id="reg-phone" placeholder="Please enter your phone or mobile number*" required>
+											</div>
+										</li>
+										<li>
+											<label for="reg-password" class="required-field">Password</label>
+											<div class="input-holder">
+												<input type="password" id="reg-password" placeholder="Please your password*" required>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<ul class="wizard-btn-holder">
+									<li><a href="#" class="wizard-action-btn-login">Login Now</a></li>
+									<li><button type="submit" class="wizard-action-btn-next">Continue<span class="icon-arrow-right"></span></button></li>
+								</ul>
+							</form>
+							<form class="wizard-step">
+								<div class="col">
+									<div class="toolTip">
+										<h1>Lorem Ipsum</h1>
+										<h2>Your exact address will only be shared with confirmed guests.</h2>
+									</div>
+									<div class="wizard-image"><img src="images/img21.png" alt="Image Description"></div>
+								</div>
+								<div class="col input-content-holder">
+									<h3><strong>Step 2:</strong><span>Select</span> Role.</h3>
+									<ul class="input-fields scroll-able">
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Owner/Investor</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Tenant</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Agent/broker</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Appraiser</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Architect</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Builder</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Corporate</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Investor</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Builder</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Corporate</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Investor</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Builder</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Corporate</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Investor</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Builder</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Corporate</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Investor</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Builder</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Corporate</span>
+											</label>
+										</li>
+										<li>
+											<label for="owner/inves" class="customCheckbox">
+												<input type="checkbox" id="owner/inves">
+												<span class="fake-checkbox"></span>
+												<span class="fake-label">Investor</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<ul class="wizard-btn-holder">
+									<li><button type="button" class="wizard-action-btn-prev"><span class="icon-keyboard_arrow_left"></span>Back</button></li>
+									<li><button type="submit" class="wizard-action-btn-next">Continue<span class="icon-arrow-right"></span></button></li>
+								</ul>
+							</form>
+							<form class="wizard-step current-active-slide">
+								<div class="col">
+									<div class="toolTip">
+										<h1>Lorem Ipsum</h1>
+										<h2>Your exact address will only be shared with confirmed guests.</h2>
+									</div>
+									<div class="wizard-image"><img src="images/img20.png" alt="Image Description"></div>
+								</div>
+								<div class="col input-content-holder">
+									<h3><strong>Step 3:</strong><span>If you are an</span> Agent.</h3>
+									<ul class="input-fields">
+										<li>
+											<div class="company-logo">
+												<input type="file" id="c-logo" name="companyLogo" onchange="companyLogoUploader(this , '.company-profileP')">
+												<div class="logo-holder">
+													<label for="c-logo"></label>
+													<div class="picture-holder">
+														<img src="" class="company-profileP" alt="Company logo">
+														<a class="company-logo-delete"><span class="icon-bin-delete"></span></a>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<label for="reg-email" class="required-field">Email</label>
+											<div class="input-holder">
+												<input type="email" id="reg-email" placeholder="Please enter your email*" required>
+											</div>
+										</li>
+										<li>
+											<label for="reg-phone" class="required-field">Phone</label>
+											<div class="input-holder">
+												<input type="tel" id="reg-phone" placeholder="Please enter your phone or mobile number*" required>
+											</div>
+										</li>
+										<li>
+											<label for="reg-password" class="required-field">Password</label>
+											<div class="input-holder">
+												<input type="password" id="reg-password" placeholder="Please your password*" required>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<ul class="wizard-btn-holder">
+									<li><button type="button" class="wizard-action-btn-prev"><span class="icon-keyboard_arrow_left"></span>Back</a></li>
+									<li><button type="submit" class="wizard-action-btn-next">Continue<span class="icon-arrow-right"></span></button></li>
+								</ul>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</main>
 		<footer id="footer">
-			<div class="footer-holder">
+			<!--<div class="footer-holder">
 				<div class="container">
 					<strong class="heading">Contact <span>Us</span></strong>
 					<form class="submit-query">
@@ -3444,12 +3456,6 @@
 						<textarea placeholder="Your message"></textarea>
 						<button type="submit">Send email <span class="icon-arrow-right"></span></button>
 					</form>
-					<!--<div class="col">
-						<ul class="social-plugins">
-							<li><div class="fb-page" data-href="https://www.facebook.com/proerty92pk-354399088098995/" data-tabs="timeline" data-height="382" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/proerty92pk-354399088098995/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/proerty92pk-354399088098995/">proerty92.pk</a></blockquote></div></li>
-							<li><a class="twitter-timeline" data-height="384" href="https://twitter.com/92nugree">Tweets by 92nugree</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-						</ul>
-					</div>-->
 				</div>
 				<div class="bottom-footer">
 					<span class="rights">&copy;2016 <a href="#">Nugree.com</a> All Rights Reserved.</span>
@@ -3462,7 +3468,7 @@
 					</ul>
 				</div>
 			</div>
-		</footer>
+		</footer>-->
 		<!--<a href="#submit-requirement-popup" class="submit-requirement lightbox">Share <span class="hidden-xs">your</span> requirement</a>-->
 		<a href="#alerts-nugree" class="lightbox btn-alerts-nugree"></a>
 	</div>
