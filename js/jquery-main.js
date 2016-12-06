@@ -10,11 +10,17 @@ $(document).ready(function() {
 	if($(".form-wizard-ui").length){
 		var mainFormHeight = $(".form-wizard-ui").height();
 		var aboluteHeight = $(".current-active-slide").find(".input-content-holder").height();
+		var checkInputField = $(".wizard-step.current-active-slide").find("input, textarea");
+		var checkRadioCheckboxes = $(".wizard-step.current-active-slide").find("input[type='checkbox'], input[type='radio'], select");
 
 		if(aboluteHeight > mainFormHeight){
 			$(".form-wizard-ui").css(
 				'height', aboluteHeight+70
 			)
+		}
+		if(checkInputField.val() === '' || checkRadioCheckboxes.prop("checked", false)){
+			$(".wizard-step.current-active-slide").find('.wizard-btn-holder .wizard-action-btn-next').addClass('disabled');
+			$(".wizard-step.current-active-slide").find('.wizard-btn-holder .wizard-action-btn-next').prop('disabled', true);
 		}
 	}
 
