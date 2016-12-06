@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 		if(aboluteHeight > mainFormHeight){
 			$(".form-wizard-ui").css(
-				'min-height', aboluteHeight+70
+				'height', aboluteHeight+70
 			)
 		}
 	}
@@ -622,4 +622,7 @@ $(document).on('change', '#add-prop-wanted', function() {
 		$('.addProperty-form').find('h1').text('Add');
 		$('.addProperty-form').find('h1').append(' <span>Property</span>');
 	}
+});
+$(document).on('click', '.searchLocations .icon-search', function(){
+	$(this).parent().toggleClass('active');
 });
