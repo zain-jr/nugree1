@@ -190,6 +190,7 @@ $media-expressions: (
       @extend %text-left;
       @include font(27,30);
       margin: 0 0 15px;
+      color: $p42-color;
 
       a {
         font-weight: 700;
