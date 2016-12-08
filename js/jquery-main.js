@@ -1,7 +1,6 @@
 $(document).ready(function() {
-	if($("#custom-scroll-bar").length){
+	
 		$('#custom-scroll-bar').optiscroll();
-	}
 
 	if($(".js-example-basic-single").length){
 		$(".js-example-basic-single").select2();
@@ -631,4 +630,7 @@ $(document).on('change', '#add-prop-wanted', function() {
 });
 $(document).on('click', '.searchLocations .icon-search', function(){
 	$(this).parent().toggleClass('active');
+});
+$(document).on('click', ".wizard-action-btn-next", function(e){
+	e.preventDefault();
 });
