@@ -3638,21 +3638,42 @@ h2 {
 .breadcrumbs {
   @extend %listreset;
   @include align-reset(top, 18,21);
+  position: relative;
 
   li {
     margin: 0 0 10px;
-    &:first-child{
-      &:before { display: none;}
+    background: $p42-background;
+    padding: 5px 24px 5px;
+    position: relative;
+
+    &.current {
+      &:before,
+      &:after {
+        display: none;
+      }  
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      content: '';
+      @include triangle(30px, $p42-background, right);
     }
     &:before {
-      padding: 0 5px;
-      @include align(top);
-      content: '/';
-      color: $light-blue;
+      @include triangle(30px, $black, right);
+      right: -1px;
     }
   }
   a {
     text-decoration: none;
+    position: relative;
+    color: $black;
+    @include align(top);
+
     &:hover {
       text-decoration: underline;
     }
