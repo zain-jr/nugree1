@@ -1,7 +1,4 @@
 $(document).ready(function() {
-	
-		$('#custom-scroll-bar').optiscroll();
-
 	if($(".js-example-basic-single").length){
 		$(".js-example-basic-single").select2();
 	}	
