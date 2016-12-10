@@ -2240,12 +2240,26 @@ h2 {
     opacity: 0.9;
     
   }
-  .description {
+  ul {
+    @extend %listreset;
     color: $mix-black;
     @include font(25,28);
     font-weight: 300;
-    padding: 0 30px;
+    @extend %container;
+    padding: 0;
     @extend %text-center;
+    @extend %layout;
+
+    li {
+      width: 33.33%;
+      float: left;
+      padding: 0 10px;
+    }
+
+    span {
+      font-weight: 600;
+      color: $mix-black;
+    }
 
     @include media('<tablet'){
       @include font(16,21);
